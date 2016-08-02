@@ -16,14 +16,20 @@ session = DBSession()
 
 
 #YOUR WEB APP CODE GOES HERE
+@app.route('/food')
+def food():
+	return render_template('category_food.html')
 
+@app.route('/activity')
+def activity():
+	return render_template('category_activity.html')
+@app.route('/education')
+def education():
+	return render_template('category_education.html')
 
 @app.route('/')
 def main():
     return render_template('main_page.html')
-
-
-
 
 
 if __name__ == '__main__':
