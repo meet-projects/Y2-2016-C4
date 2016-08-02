@@ -19,7 +19,9 @@ session = DBSession()
 
 
 
-
+@app.route('/')
+def main():
+    return render_template('main_page.html')
 
 
 
