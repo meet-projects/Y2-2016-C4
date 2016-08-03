@@ -1,12 +1,13 @@
 /* Add your CSS Code here */
 body {
 	font-family: 'Shadows Into Light Two', cursive;
-	background-image: url("http://www.desktopimages.org/pictures/2015/1105/1/light-blue-background-images-309191.jpg");
+	background-image: url("http://pre01.deviantart.net/1454/th/pre/f/2012/108/8/6/teal_windows_8_bubbles_background_by_gifteddeviant-d4wkij8.png");
 
 }
 
 .thumbnail>img {
 	width: 400;
+	border-radius: 8px;
 }
 
 
