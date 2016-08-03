@@ -18,6 +18,7 @@ session = DBSession()
 session.query(Question).delete()
 session.query(Answer).delete()
 session.query(Picture).delete()
+session.query(QuestAndPic).delete()
 ################################################
 #   MAJD YOU WORK ON THIS   #
 
@@ -66,10 +67,10 @@ q5 = Question(
 	a4 = 'interested',
 	a5 = 'not sure')
 
-'''x = QuestAndPic(
+x = QuestAndPic(
 	question_id = q1.id,
 	pic_id = 1)
-'''
+
 questions=[q1,q2,q3,q4]
 for question_to_add in questions:
 	session.add(question_to_add)
@@ -80,7 +81,6 @@ answer_chosen='a3'
 a1=Answer(
 	question_id = 1,
     selected=answer_chosen,
-    text=getattr(question, answer_chosen),
     nationality = 'Palastinian')
 
 answers=[a1]
@@ -144,5 +144,14 @@ for pic_to_add in pics:
 
 ##############################################
 
+picquestion = QuestAndPic()
+picquestion.picture = p1
+picquestion.question = q1
+picquestionw = QuestAndPic()
+picquestionw.picture=p1
+picquestionw.question=q2
+
+session.add(picquestion)
+session.add(picquestionw)
 
 session.commit()

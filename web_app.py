@@ -22,23 +22,15 @@ def category(category_name):
 	pics=session.query(Picture).filter_by(category=category_name).all()
 	return render_template('category.html',pics=pics)
 
-@app.route('/food')
-def category_food():
-	return render_template('category_food.html')
-
-@app.route('/activity')
-def category_activity():
-	return render_template('category_activity.html')
-
-@app.route('/education')
-def category_education():
-	return render_template('category_education.html')
-
 @app.route('/')
 def main_page():
 	pics=session.query(Picture).filter_by(category='cover').all()
-	return render_template('main_page.html')
+	return render_template('main_page.html',pics=pics)
 
+@app.route('/pictures/<int:picture_id>')
+def pictures(picture_id):
+	pic=session.query(Picture).filter_by(id=picture_id).first()
+	return render_template('questions.html',pic=pic)
 
 
 @app.route('/submit_answers/<int:picture_id>', methods= ['post'])

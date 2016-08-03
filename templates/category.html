@@ -19,19 +19,14 @@
 
 <body>
 <div class="container-fluid">
-<h1>Food is good</h1>
+<h1>{{pics[0].category.capitalize()}} is good</h1>
 <div class="row">
 {%for pic in pics%}
 	<div class="col-md-6">
 		<div class="thumbnail transparent">
 			<img src="{{url_for('static' , filename=pic.path)}}">
-			<form action="{{url_for('category_food')}}">
-				can you guess the nationality?<br>
-				<input type="radio" name="nationality" value="israeli">israeli<br>
-				<input type="radio" name="nationality" value="palestionian">palestinian<br>
-				<input type="submit" name="submit" value="submit">
-			</form>
-			<a href="{{url_for('main_page')}}" class="btn btn-info" role="button">back to category</a>
+			<a href="{{url_for('main_page')}}" class="btn btn-info" role="button">Back to Category</a>
+			<a href="{{url_for('pictures', picture_id= pic.id)}}" class="btn btn-info" role="button">Continue to Questions HERE!!!</a> 
 
 		</div>
 	</div>

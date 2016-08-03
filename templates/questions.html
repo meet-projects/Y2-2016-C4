@@ -11,13 +11,20 @@
 	<title>
 		ANENA
 	</title>	
-
 </head>
 <body>
 
+<img src="{{url_for ('static' , filename=pic.path)}}">
+{%for q in pic.questions%}
+
+{{q.text}}
+{%endfor%}
+
+
+
 <img src="{{url_for('static' , filename='pic/food/israeldessert.jpg')}}">
 can you guess the nationality?<br>
-<form action="{{url_for('submit_answers')}}" method="Post">
+<form action="{{url_for('submit_answers', picture_id=pic.id)}}" method="Post">
 <input type="radio" name="nationality" value="q1-a1">israeli<br>
 <input type="radio" name="nationality" value="q1-a2">palestinian<br>
 <input type="radio" name="nationality" value="q1-a3">other<br>
