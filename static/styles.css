@@ -1,4 +1,15 @@
 /* Add your CSS Code here */
 body {
-	font-family: 'Shadows Into Light Two', cursive;;
+	font-family: 'Shadows Into Light Two', cursive;
+	background-image: url("../static/pic/background.jpg");
+}
+
+.thumbnail>img {
+	height: 400px;
+}
+
+
+.transparent {
+	background-color: transparent;
+	border: none;
 }
