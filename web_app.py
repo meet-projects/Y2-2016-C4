@@ -54,10 +54,11 @@ def submit_answers(picture_id):
 
 	return str(request.form)
 
+'''
 @app.route('/questions')
 def questions():
 	return render_template('questions.html')
-	
+'''
 
 
 if __name__ == '__main__':
