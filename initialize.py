@@ -1,7 +1,11 @@
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
+
+from database_setup import Base, Question, Answer, QuestAndPic
+
 from database_setup import Base, Question, Answer, QuestsAndPics, Picture
+
 
 engine = create_engine('sqlite:///project.db')
 Base.metadata.create_all(engine)
@@ -22,7 +26,7 @@ session.query(Picture).delete()
 
 q1 = Question(
 
-    text = 'Where do you think picture num.1 was taken ?',
+    text = 'where do you think picture num.1 was taken ?',
 
     a1 = 'Israel',
     a2 = 'USA',
@@ -98,7 +102,34 @@ p3=Picture(
 p4=Picture(
 	path='pic/food/Palestinefood.jpg',
 	category= 'food')
-pics=[p1,p2,p3,p4]
+
+############################################## PIC ----- ACTIVITY
+p5=Picture(
+	path= 'pic/activities/israelbowling.jpg',
+	category= 'activity')
+p6=Picture(
+	path= 'pic/activities/israelcinema.jpg',
+	category= 'activity')
+p7=Picture(
+	path= 'pic/activities/palestinebowling.jpg',
+	category= 'activity')
+p8=Picture(
+	path= 'pic/activities/palestinecinema.jpg',
+	category= 'activity')
+############################################## PIC ----- EDUCATION
+p9=Picture(
+	path= 'pic/education/israelreligion.jpg',
+	category= 'education')
+p10=Picture(
+	path= 'pic/education/Israelschool.jpg',
+	category= 'education')
+p11=Picture(
+	path= 'pic/education/palestinereligion.jpg',
+	category= 'education')
+p12=Picture(
+	path= 'pic/education/palestineschool.jpg',
+	category= 'education')
+pics=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12]
 for pic_to_add in pics:
 	session.add(pic_to_add)
 ##############################################
