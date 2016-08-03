@@ -5,10 +5,12 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
+
+
 class Question(Base):
     __tablename__ = 'question'
     id = Column(Integer, primary_key=True)
-    #pic_id = Column(Integer, ForeignKey('pic.id'))
+    pic_id = Column(Integer)
     text = Column(String(15))
     a1 = Column(String(30))
     a2 = Column(String(60))
@@ -16,11 +18,26 @@ class Question(Base):
     a4 = Column(String(30))
     a5 = Column(String(30))
 
+
 class Answer(Base):
     __tablename__ = 'answer'
     id = Column(Integer, primary_key=True)
+    pic_id = Column(Integer)
     question_id = Column(Integer, ForeignKey('question.id'))
-    selected=Column(String(2))
-    text = Column(String(15))
+    selected=Column(String)
+    text = Column(String)
     nationality = Column(String(15))
 
+class QuestAndPic(Base):
+    __tablename__ = 'quest_and_pic'
+    id = Column(Integer, primary_key=True)
+    pic_id = Column(Integer, ForeignKey('picture.id'))
+    question_id = Column(Integer, ForeignKey('question.id'))
+    question = relationship('Question')
+
+class Picture(Base):
+    __tablename__ = 'picture'
+    id = Column(Integer, primary_key=True)
+    pic_name = Column(String)
+    path = Column(String)
+    category = Column(String)
