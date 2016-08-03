@@ -21,41 +21,52 @@ session.query(Answer).delete()
 
 
 q1 = Question(
+<<<<<<< HEAD
     pic_id = 1,
     text = 'where do you think picture nom.1 was taken ?',
+=======
+    #pic_id = 1,
+    text = 'where do you think picture num.1 was taken ?',
+>>>>>>> 2e8e2d4a1e94b480c732aa982c95f03e649e2252
     a1 = 'Israel',
     a2 = 'USA',
     a3 = 'Palestine',
     a4 = 'Syria',
-	a5 = 'other')
+	a5 = 'Other')
 
 
 q2 = Question(
-	pic_id = 2,
-	text = 'where do you think picture nom.2 was taken ?',
+
+	text = 'Where do you think picture num.2 was taken ?',
+
 	a1 = 'Israel',
 	a2 = 'USA',
 	a3 = 'Palestine',
 	a4 = 'Syria',
-	a5 = 'other')
+	a5 = 'Other')
 
 q3 = Question(
-	pic_id = 3,
-	text= 'How easy for you to recognize which one belongs to Palestine and which one belongs to Israel ?',
-	a1 = 'very easy',
-	a2 = 'easy',
-	a3 = 'normal',
-	a4 = 'hard',
-	a5 = 'very hard')
-
+	text= 'How easy was it for you to recognize which one belongs to Palestine and which one belongs to Israel ?',
+	a1 = 'Very easy',
+	a2 = 'Easy',
+	a3 = 'Normal',
+	a4 = 'Hard',
+	a5 = 'Very hard')
 q4 = Question(
-	pic_id = 4,
-	text = 'why ?',
-	a1 = 'its obvious',
-	a2 = 'i have been there',
-	a3 = 'i dont know it seems like it',
-	a4 = 'other',
-	a5 = 'something')
+	text = 'Why ?',
+	a1 = 'Its obvious',
+	a2 = 'I have been there',
+	a3 = 'I dont know it seems like it',
+	a4 = 'There is no difference',
+	a5 = 'Other')
+
+q5 = Question(
+	text = 'How did it make you feel ?',
+	a1 = 'Happy',
+	a2 = 'sad',
+	a3 = 'scared',
+	a4 = 'interested',
+	a5 = 'not sure')
 
 x = QuestsAndPics(
 	question_id = q1.id,
