@@ -2,9 +2,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
 
-from database_setup import Base, Question, Answer, QuestAndPic
-
-from database_setup import Base, Question, Answer, QuestsAndPics, Picture
+from database_setup import Base, Question, Answer, QuestAndPic, Picture
 
 
 engine = create_engine('sqlite:///project.db')
@@ -68,10 +66,10 @@ q5 = Question(
 	a4 = 'interested',
 	a5 = 'not sure')
 
-x = QuestsAndPics(
+'''x = QuestAndPic(
 	question_id = q1.id,
 	pic_id = 1)
-
+'''
 questions=[q1,q2,q3,q4]
 for question_to_add in questions:
 	session.add(question_to_add)
@@ -129,6 +127,17 @@ p11=Picture(
 p12=Picture(
 	path= 'pic/education/palestineschool.jpg',
 	category= 'education')
+############################################# PIC ----- COVER
+p13=Picture(
+	path= 'pic/palestineschool.jpg',
+	category= 'cover')
+p14=Picture(
+	path= 'pic/cover.jpg',
+	category= 'cover')
+p15=Picture(
+	path= 'pic/activities.jpg',
+	category= 'cover')
+
 pics=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12]
 for pic_to_add in pics:
 	session.add(pic_to_add)

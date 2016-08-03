@@ -37,7 +37,7 @@ def category_education():
 @app.route('/')
 def main_page():
 	pics=session.query(Picture).filter_by(category='cover').all()
-    return render_template('main_page.html')
+	return render_template('main_page.html')
 
 
 if __name__ == '__main__':
