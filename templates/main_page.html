@@ -27,10 +27,9 @@
 {%for pic in pics%}
   <div class="col-md-4">
     <div class="thumbnail">
-      <img src="{{ url_for('static', filename=pic.path) }}">
+      <img class="main_page_img" src="{{ url_for('static', filename=pic.path) }}">
       <div class="caption">
         <h3>{{pic.category.capitalize()}}</h3>
-        
         <p>
         <a href="{{url_for('category', category_name=pic.category)}}" class="btn btn-primary" role="button">Enter</a>
         </p>

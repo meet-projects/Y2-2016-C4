@@ -98,6 +98,7 @@ p3=Picture(
 	path='pic/food/palestinedessert.jpg',
 	category= 'food',
 	cover=False)
+
 p4=Picture(
 	path='pic/food/Palestinefood.jpg',
 	category= 'food',
