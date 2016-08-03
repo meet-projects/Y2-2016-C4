@@ -15,8 +15,8 @@ session = DBSession()
 # This deletes everything in your database.
 session.query(Question).delete()
 session.query(Answer).delete()
-
-###############################################
+session.query(Picture).delete()
+################################################
 #   MAJD YOU WORK ON THIS   #
 
 
@@ -98,6 +98,9 @@ p3=Picture(
 p4=Picture(
 	path='pic/food/Palestinefood.jpg',
 	category= 'food')
+pics=[p1,p2,p3,p4]
+for pic_to_add in pics:
+	session.add(pic_to_add)
 ##############################################
 
 
