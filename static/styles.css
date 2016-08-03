@@ -5,8 +5,10 @@ body {
 
 }
 
-.thumbnail>img {
-	width: 400;
+
+.web_app_img>img {
+	width: 400px;
+	height:200px;
 	border-radius: 8px;
 }
 
