@@ -1,7 +1,7 @@
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
-from database_setup import Base, Question, Answer, QuestsAndPics
+from database_setup import Base, Question, Answer, QuestsAndPics, Picture
 
 engine = create_engine('sqlite:///project.db')
 Base.metadata.create_all(engine)
@@ -21,13 +21,9 @@ session.query(Answer).delete()
 
 
 q1 = Question(
-<<<<<<< HEAD
-    pic_id = 1,
-    text = 'where do you think picture nom.1 was taken ?',
-=======
-    #pic_id = 1,
-    text = 'where do you think picture num.1 was taken ?',
->>>>>>> 2e8e2d4a1e94b480c732aa982c95f03e649e2252
+
+    text = 'Where do you think picture num.1 was taken ?',
+
     a1 = 'Israel',
     a2 = 'USA',
     a3 = 'Palestine',
@@ -88,5 +84,21 @@ a1=Answer(
 answers=[a1]
 for question_to_add in questions:
 	session.add(question_to_add)
+############################################## PIC ----- FOOD
+p1=Picture(
+	path='pic/food/israeldessert.jpg',
+	category= 'food')
+
+p2=Picture(
+	path='pic/food/israelfood.jpg',
+	category= 'food')
+p3=Picture(
+	path='pic/food/palestinedessert.jpg',
+	category= 'food')
+p4=Picture(
+	path='pic/food/Palestinefood.jpg',
+	category= 'food')
 ##############################################
+
+
 session.commit()

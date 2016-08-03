@@ -38,5 +38,5 @@ class QuestsAndPics(Base):
 class Picture(Base):
     __tablename__ = 'picture'
     id = Column(Integer, primary_key=True)
-    pic_name = Column(String)
-    
+    path = Column(String)
+    category = Column(String)
