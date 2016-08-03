@@ -38,9 +38,6 @@ class QuestAndPic(Base):
 class Picture(Base):
     __tablename__ = 'picture'
     id = Column(Integer, primary_key=True)
-<<<<<<< HEAD
     pic_name = Column(String)
-=======
     path = Column(String)
     category = Column(String)
->>>>>>> 745339a3cb2996ebe6d0c7cc0cce6eb726afa87a
