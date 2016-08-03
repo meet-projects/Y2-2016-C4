@@ -11,37 +11,18 @@
 	<title>
 		ANENA
 	</title>	
-
 </head>
-
 <body>
-<div class="container-fluid">
-<h1>{{pics[0].category.capitalize()}} is good</h1>
-<div class="row">
-{%for pic in pics%}
-	<div class="col-md-6">
-		<div class="thumbnail">
-			<img src="{{url_for('static' , filename=pic.path)}}">
-			<a href="{{url_for('main_page')}}" class="btn btn-info" role="button">Back to Category</a>
-			<a href="{{url_for('pictures', picture_id= pic.id)}}" class="btn btn-info" role="button">Continue to Questions HERE!!!</a> 
 
-		</div>
-	</div>
+<img src="{{url_for ('static' , filename=pic.path)}}">
+{%for q in pic.questions%}
+
+{{q.text}}
 {%endfor%}
-</div>
-
-
-</div>
-
-
-
-
-
-
 
 
 
 
 </body>
-</html>
 
+</html>

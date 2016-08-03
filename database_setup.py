@@ -7,6 +7,14 @@ Base = declarative_base()
 
 
 
+class QuestAndPic(Base):
+    __tablename__ = 'quest_and_pic'
+    id = Column(Integer, primary_key=True)
+    pic_id = Column(Integer, ForeignKey('picture.id'))
+    question_id = Column(Integer, ForeignKey('question.id'))
+    question = relationship('Question')
+    picture = relationship('Picture')
+
 class Question(Base):
     __tablename__ = 'question'
     id = Column(Integer, primary_key=True)
@@ -25,15 +33,8 @@ class Answer(Base):
     pic_id = Column(Integer)
     question_id = Column(Integer, ForeignKey('question.id'))
     selected=Column(String)
-    text = Column(String)
     nationality = Column(String(15))
 
-class QuestAndPic(Base):
-    __tablename__ = 'quest_and_pic'
-    id = Column(Integer, primary_key=True)
-    pic_id = Column(Integer, ForeignKey('picture.id'))
-    question_id = Column(Integer, ForeignKey('question.id'))
-    question = relationship('Question')
 
 class Picture(Base):
     __tablename__ = 'picture'
@@ -41,3 +42,4 @@ class Picture(Base):
     pic_name = Column(String)
     path = Column(String)
     category = Column(String)
+    questions = relationship('Question', secondary='quest_and_pic', uselist=True)

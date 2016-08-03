@@ -31,9 +31,10 @@
 <br>
 
 
-{%for pic in pics%}
+
 <div class="container-fluid">
 <div class="row">
+{%for pic in pics%}
   <div class="col-md-4">
     <div class="thumbnail">
       <img src="{{ url_for('static', filename=pic.path) }}">
@@ -41,7 +42,7 @@
         <h3>Food</h3>
         
         <p>
-        <a href="{{url_for(pic.category)}}" class="btn btn-primary" role="button">Enter</a>
+        <a href="{{url_for('category', category_name=pic.category)}}" class="btn btn-primary" role="button">Enter</a>
         </p>
       </div>
     </div>
