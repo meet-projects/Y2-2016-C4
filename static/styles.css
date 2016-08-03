@@ -6,11 +6,11 @@ body {
 }
 
 .thumbnail>img {
-	height: 400px;
+	width: 400;
 }
 
 
 .transparent {
 	background-color: transparent;
-	border: none;
+	border-color: skyblue;
 }
