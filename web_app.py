@@ -19,12 +19,12 @@ session = DBSession()
 #YOUR WEB APP CODE GOES HERE
 @app.route('/category/<string:category_name>')
 def category(category_name):
-	pics=session.query(Picture).filter_by(category=category_name).all()
+	pics=session.query(Picture).filter_by(category=category_name, cover=False).all()
 	return render_template('category.html',pics=pics)
 
 @app.route('/')
 def main_page():
-	pics=session.query(Picture).filter_by(category='cover').all()
+	pics=session.query(Picture).filter_by(cover=True).all()
 	return render_template('main_page.html',pics=pics)
 
 @app.route('/pictures/<int:picture_id>')

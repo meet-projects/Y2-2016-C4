@@ -75,8 +75,6 @@ questions=[q1,q2,q3,q4]
 for question_to_add in questions:
 	session.add(question_to_add)
 ###############################################
-question = session.query(Question).filter_by(id=1).one()
-print (question)
 answer_chosen='a3'
 a1=Answer(
 	question_id = 1,
@@ -89,54 +87,69 @@ for question_to_add in questions:
 ############################################## PIC ----- FOOD
 p1=Picture(
 	path='pic/food/israeldessert.jpg',
-	category= 'food')
+	category= 'food',
+	cover=False)
 
 p2=Picture(
 	path='pic/food/israelfood.jpg',
-	category= 'food')
+	category= 'food',
+	cover=False)
 p3=Picture(
 	path='pic/food/palestinedessert.jpg',
-	category= 'food')
+	category= 'food',
+	cover=False)
 p4=Picture(
 	path='pic/food/Palestinefood.jpg',
-	category= 'food')
+	category= 'food',
+	cover=False)
 
 ############################################## PIC ----- ACTIVITY
 p5=Picture(
 	path= 'pic/activities/israelbowling.jpg',
-	category= 'activity')
+	category= 'activity',
+	cover=False)
 p6=Picture(
 	path= 'pic/activities/israelcinema.jpg',
-	category= 'activity')
+	category= 'activity',
+	cover=False)
 p7=Picture(
 	path= 'pic/activities/palestinebowling.jpg',
-	category= 'activity')
+	category= 'activity',
+	cover=False)
 p8=Picture(
 	path= 'pic/activities/palestinecinema.jpg',
-	category= 'activity')
+	category= 'activity',
+	cover=False)
 ############################################## PIC ----- EDUCATION
 p9=Picture(
 	path= 'pic/education/israelreligion.jpg',
-	category= 'education')
+	category= 'education',
+	cover=False)
 p10=Picture(
 	path= 'pic/education/Israelschool.jpg',
-	category= 'education')
+	category= 'education',
+	cover=False)
 p11=Picture(
 	path= 'pic/education/palestinereligion.jpg',
-	category= 'education')
+	category= 'education' , 
+	cover=False)
 p12=Picture(
 	path= 'pic/education/palestineschool.jpg',
-	category= 'education')
+	category= 'education',
+	cover=False)
 ############################################# PIC ----- COVER
 p13=Picture(
 	path= 'pic/palestineschool.jpg',
-	category= 'cover')
+	category= 'education',
+	cover=True)
 p14=Picture(
 	path= 'pic/cover.jpg',
-	category= 'cover')
+	category= 'food',
+	cover=True)
 p15=Picture(
 	path= 'pic/activities.jpg',
-	category= 'cover')
+	category= 'activities',
+	cover=True)
 
 pics=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15]
 for pic_to_add in pics:
