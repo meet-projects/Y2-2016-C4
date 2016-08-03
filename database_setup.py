@@ -28,8 +28,8 @@ class Answer(Base):
     text = Column(String)
     nationality = Column(String(15))
 
-class QuestsAndPics(Base):
-    __tablename__ = 'quests_and_pics'
+class QuestAndPic(Base):
+    __tablename__ = 'quest_and_pic'
     id = Column(Integer, primary_key=True)
     pic_id = Column(Integer, ForeignKey('picture.id'))
     question_id = Column(Integer, ForeignKey('question.id'))
@@ -39,4 +39,3 @@ class Picture(Base):
     __tablename__ = 'picture'
     id = Column(Integer, primary_key=True)
     pic_name = Column(String)
-    
