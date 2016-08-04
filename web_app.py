@@ -58,10 +58,6 @@ def submit_answers(picture_id):
 	return str(request.form)
 
 
-@app.route('/questions')
-def questions():
-	return render_template('questions.html')
-
 @app.route('/statistics/<int:picture_id>')
 def answer_statistics(picture_id):
 
@@ -86,8 +82,8 @@ def answer_statistics(picture_id):
 
 
 
-@app.route('/<string:category_name>/pictures/<int:picture_id>/survey')
+@app.route('/survey')
 def survey():
-	return render_template('survet.html')
+	return render_template('survey.html')
 if __name__ == '__main__':
     app.run(debug=True)
