@@ -27,17 +27,17 @@ def main_page():
 	pics=session.query(Picture).filter_by(cover=True).all()
 	return render_template('main_page.html',pics=pics)
 
-@app.route('/<string:category_name>/pictures/<int:picture_id>')
-def pictures(picture_id,category_name):
-	pic1=session.query(Picture).filter_by(id=picture_id).first()
-	pair=session.query(Pair).filter_by(pic1_id=pic1.id).first()
+@app.route('/<string:category_name>/pictures/<int:pair_id>')
+def pictures(category_name,pair_id):
+	pair=session.query(Pair).filter_by(id=pair_id).first()
+	pic1=session.query(Picture).filter_by(id=pair.pic1_id).first()
 	questions=session.query(Question).all()
 	pic2=session.query(Picture).filter_by(id=pair.pic2_id).first()
-	return render_template('picture.html',pic1=pic1,pic2=pic2, questions=questions)
+	return render_template('picture.html', pair_id=pair_id, pic1=pic1,pic2=pic2, questions=questions)
 
 
-@app.route('/submit_answers/<int:picture_id>', methods= ['post'])
-def submit_answers(picture_id):
+@app.route('/submit_answers/<int:pair_id>', methods= ['post'])
+def submit_answers(pair_id):
 	answers = request.form.keys()
 	for answer in answers:
 		if answer == 'submit':
@@ -47,14 +47,11 @@ def submit_answers(picture_id):
 		answer_id= nat.split("a")[-1]
 		question_part =nat.split("a")[0]
 		question_id= question_part.split("q")[-1]
-		new_answer = Answer(pic_id= picture_id,
+		new_answer = Answer(pair_id= pair_id,
 						question_id =question_id,
 						selected= answer_id)
 		session.add(new_answer)
 	session.commit()
-
-
-
 	return str(request.form)
 
 
@@ -79,6 +76,8 @@ def answer_statistics(picture_id):
     count1=len(q5)
     answer5= count5/count *100
     session.commit()
+
+
 
 
 

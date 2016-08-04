@@ -28,7 +28,7 @@
         <div class="thumbnail transparent">
             <img src="{{url_for('static' , filename=pic.path)}}" class="web_app_img">
             <a href="{{url_for('main_page')}}" class="btn btn-info" role="button">Back to Category</a>
-            <a href="{{url_for('pictures', picture_id= pic.id, category_name=pic.category)}}" class="btn btn-info" role="button">Continue to Questions</a>
+            <a href="{{url_for('pictures', pair_id= pic.id, category_name=pic.category)}}" class="btn btn-info" role="button">Continue to Questions</a>
 
         </div>
     </div>
