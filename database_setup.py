@@ -18,7 +18,7 @@ class QuestAndPic(Base):
 class Question(Base):
     __tablename__ = 'question'
     id = Column(Integer, primary_key=True)
-    pic_id = Column(Integer)
+    pic_id = Column(Integer, ForeignKey('picture.id'))
     text = Column(String(15))
     a1 = Column(String(30))
     a2 = Column(String(60))

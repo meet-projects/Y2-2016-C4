@@ -26,7 +26,7 @@ session.query(QuestAndPic).delete()
 q1 = Question(
 
     text = 'where do you think picture num.1 was taken ?',
-
+    pic_id=6,
     a1 = 'Israel',
     a2 = 'USA',
     a3 = 'Palestine',
@@ -37,7 +37,7 @@ q1 = Question(
 q2 = Question(
 
 	text = 'Where do you think picture num.2 was taken ?',
-
+	pic_id=6,
 	a1 = 'Israel',
 	a2 = 'USA',
 	a3 = 'Palestine',
@@ -46,6 +46,7 @@ q2 = Question(
 
 q3 = Question(
 	text= 'How easy was it for you to recognize which one belongs to Palestine and which one belongs to Israel ?',
+	pic_id=6,
 	a1 = 'Very easy',
 	a2 = 'Easy',
 	a3 = 'Normal',
@@ -53,6 +54,7 @@ q3 = Question(
 	a5 = 'Very hard')
 q4 = Question(
 	text = 'Why ?',
+	pic_id=6,
 	a1 = 'Its obvious',
 	a2 = 'I have been there',
 	a3 = 'I dont know it seems like it',
@@ -61,11 +63,32 @@ q4 = Question(
 
 q5 = Question(
 	text = 'How did it make you feel ?',
+	pic_id=6,
 	a1 = 'Happy',
 	a2 = 'sad',
 	a3 = 'scared',
 	a4 = 'interested',
 	a5 = 'not sure')
+
+q1= question(
+	text= 'o you see a difference between the two pictures?',
+	pic_id=5,
+	a1='yes',
+	a2='no',
+	a3='maybe')
+
+q2 =question(
+	text= 'why ?',
+	pic_id=5,
+	a1='Picture 2 looks better',
+	a2='There is a big difference',
+	a3='Picture 1 looks luxurious',
+	a4='There is no differences',
+	a5='other')
+q3= question(
+	text='where do you think the two pictures were taken ?',
+	pic_id=5,
+	a1='Palestine and USA')
 
 x = QuestAndPic(
 	question_id = q1.id,
