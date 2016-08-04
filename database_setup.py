@@ -6,15 +6,15 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 
-
-class QuestAndPic(Base):
-    __tablename__ = 'quest_and_pic'
+'''
+class QuestAndPair(Base):
+    __tablename__ = 'quest_and_pair'
     id = Column(Integer, primary_key=True)
-    pic_id = Column(Integer, ForeignKey('picture.id'))
+    pair_id = Column(Integer, ForeignKey('pair.id'))
     question_id = Column(Integer, ForeignKey('question.id'))
     question = relationship('Question')
-    picture = relationship('Picture')
-
+    pair = relationship('Pair')
+'''
 class Question(Base):
     __tablename__ = 'question'
     id = Column(Integer, primary_key=True)
@@ -42,7 +42,7 @@ class Picture(Base):
     path = Column(String)
     category = Column(String)
     cover = Column(Boolean)
-    questions = relationship('Question', secondary='quest_and_pic', uselist=True)
+    #questions = relationship('Question', secondary='quest_and_pic', uselist=True)
 
 class Pair(Base):
     __tablename__ = 'pair'
