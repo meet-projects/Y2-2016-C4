@@ -17,6 +17,10 @@ session = DBSession()
 
 
 #YOUR WEB APP CODE GOES HERE
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+
 @app.route('/<string:category_name>')
 def category(category_name):
 	pics=session.query(Picture).filter_by(category=category_name, cover=False).all()
@@ -54,28 +58,19 @@ def submit_answers(pair_id):
 	session.commit()
 	return str(request.form)
 
+@app.route('/statistics/<int:picture_id>/<int:question_id>/')
+def answer_statistics(pair_id, question_id):
 
-@app.route('/statistics/<int:picture_id>')
-def answer_statistics(picture_id):
-
-    temp = session.query(Answer).filter_by(pic_id= picture_id).all()
-    count = len(temp)
-    q1 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a1').all()
-    count1=len(q1)
-    answer1= count1/count *100
-    q2 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a2').all()
-    count1=len(q2)
-    answer2= count2/count *100
-    q3 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a3').all()
-    count1=len(q3)
-    answer3= count3/count *100
-    q4 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a4').all()
-    count1=len(q4)
-    answer4= count4/count *100
-    q5 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a5').all()
-    count1=len(q5)
-    answer5= count5/count *100
-    session.commit()
+    answers = session.query(Answer).filter_by(pic_id= picture_id, question_id=question_id).all()
+    q = session.query(Question).filter_by(id = question_id).one()
+    num_answers = len(answers)
+    histogram = {'a1': 0, 'a2': 0, 'a3': 0, 'a4': 0, 'a5': 0}
+    for answer in answers:
+        selected_answer = answer.selected
+        histogram[selected_answer] += 1
+    for answer in histogram.keys():
+        histogram[answer] /= num_answers * 100
+    return render_template('statistics.html', q=q, answer1=histogram['a1'], answer2=histogram['a2'],answer3=histogram['a3'],answer4=histogram['a4'],answer5=histogram['a5'])
 
 
 
