@@ -1,19 +1,19 @@
 /* Add your CSS Code here */
+
+
+
 body {
 	font-family: 'Shadows Into Light Two', cursive;
 	background-image: url("http://pre01.deviantart.net/1454/th/pre/f/2012/108/8/6/teal_windows_8_bubbles_background_by_gifteddeviant-d4wkij8.png");
-
 }
-
-
-.web_app_img>img {
-	width: 400px;
-	height:200px;
-	border-radius: 8px;
-}
-
 
 .transparent {
 	background-color: transparent;
 	border-color: skyblue;
+}
+
+.thumbnail > .web_app_img {
+	width: 400px;
+	height:220px;
+	border-radius: 8px;
 }

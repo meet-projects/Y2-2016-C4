@@ -27,7 +27,7 @@
 {%for pic in pics%}
   <div class="col-md-4">
     <div class="thumbnail transparent">
-      <img src="{{ url_for('static', filename=pic.path) }}"
+      <img src="{{ url_for('static', filename=pic.path)}}" class="web_app_img">
         <div class="caption">
         <h3>{{pic.category.capitalize()}}</h3>
         <p>
@@ -35,7 +35,7 @@
         </p>
       </div>
       </div>
-      
+      </div>
 
 {%endfor%}
 </div>
