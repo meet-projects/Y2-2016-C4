@@ -2,7 +2,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
 
-from database_setup import Base, Question, Answer, QuestAndPic, Picture, Pair
+from database_setup import Base, Question, Answer, Picture, Pair#, QuestAndPair
 
 
 engine = create_engine('sqlite:///project.db')
@@ -18,7 +18,7 @@ session = DBSession()
 session.query(Question).delete()
 session.query(Answer).delete()
 session.query(Picture).delete()
-session.query(QuestAndPic).delete()
+#session.query(QuestAndPic).delete()
 ################################################
 #   MAJD YOU WORK ON THIS   #
 
@@ -64,11 +64,11 @@ q5 = Question(
 	a3 = 'scared',
 	a4 = 'interested',
 	a5 = 'not sure')
-
-x = QuestAndPic(
+'''
+qp = QuestAndPic(
 	question_id = q1.id,
-	pic_id = 1)
-
+	pair_id = 1)
+'''
 questions=[q1,q2,q3,q4,q5]
 for question_to_add in questions:
 	session.add(question_to_add)
@@ -192,23 +192,23 @@ pair5=Pair(pic1_id =9,
 pair6=Pair(pic1_id =10,
 	pic2_id=12
 	)
-pair8=Pair(pic1_id =13,
+pair7=Pair(pic1_id =13,
 	pic2_id=15
 	)
-pair9=Pair(pic1_id =14,
+pair8=Pair(pic1_id =14,
 	pic2_id=16
 	)
-pair10=Pair(pic1_id =17,
+pair9=Pair(pic1_id =17,
 	pic2_id=19
 	)
-pair11=Pair(pic1_id =18,
+pair10=Pair(pic1_id =18,
 	pic2_id=20
 	)
-pairs=[pair1,pair2,pair3,pair4,pair5,pair6,pair7,pair8,pair9,pair10,pair11]##############################################################Continue
+pairs=[pair1,pair2,pair3,pair4,pair5,pair6,pair7,pair8,pair9,pair10]##############################################################Continu
 for pair_to_add in pairs:
 	session.add(pair_to_add)
 ##############################################
-picquestion = QuestAndPic()
+'''picquestion = QuestAndPic()
 picquestion.picture = p1
 picquestion.question = q1
 picquestionw = QuestAndPic()
@@ -216,6 +216,6 @@ picquestionw.picture=p1
 picquestionw.question=q2
 
 session.add(picquestion)
-session.add(picquestionw)
+session.add(picquestionw)'''
 
 session.commit()

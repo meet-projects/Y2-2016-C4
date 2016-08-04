@@ -35,8 +35,12 @@ def main_page():
 def pictures(picture_id,category_name):
 	pic1=session.query(Picture).filter_by(id=picture_id).first()
 	pair=session.query(Pair).filter_by(pic1_id=pic1.id).first()
-	print(pic1.id)
+<<<<<<< HEAD
+=======
+	questions=session.query(Question).all()
+>>>>>>> 4e602bb04ae32f771c4d76aded23eb208f58cae4
 	pic2=session.query(Picture).filter_by(id=pair.pic2_id).first()
+	questions=session.query(Question).all()
 	return render_template('picture.html',pic1=pic1,pic2=pic2, questions=questions)
 
 
@@ -45,7 +49,7 @@ def submit_answers(picture_id):
 	answers = request.form.keys()
 	for answer in answers:
 		if answer == 'submit':
-			continue 
+			continue
 		nat = request.form[answer]
 		nat.split("a")[-1]
 		answer_id= nat.split("a")[-1]
@@ -61,11 +65,21 @@ def submit_answers(picture_id):
 
 	return str(request.form)
 
-'''
-@app.route('/questions')
-def questions():
-	return render_template('questions.html')
-'''
+@app.route('/statistics/<int:picture_id>/<int:question_id>/')
+def answer_statistics(pair_id, question_id):
+
+<<<<<<< HEAD
+    answers = session.query(Answer).filter_by(pic_id= picture_id, question_id=question_id).all()
+    q = session.query(Question).filter_by(id = question_id).one()
+    num_answers = len(answers)
+    histogram = {'a1': 0, 'a2': 0, 'a3': 0, 'a4': 0, 'a5': 0}
+    for answer in answers:
+        selected_answer = answer.selected
+        histogram[selected_answer] += 1
+    for answer in histogram.keys():
+        histogram[answer] /= num_answers * 100
+    return render_template('statistics.html', q=q, answer1=histogram['a1'], answer2=histogram['a2'],answer3=histogram['a3'],answer4=histogram['a4'],answer5=histogram['a5'])
+=======
 @app.route('/statistics/<int:picture_id>')
 def answer_statistics(picture_id):
 
@@ -87,9 +101,12 @@ def answer_statistics(picture_id):
     count1=len(q5)
     answer5= count5/count *100
     session.commit()
-  
+>>>>>>> 4e602bb04ae32f771c4d76aded23eb208f58cae4
 
 
 
+@app.route('/survey')
+def survey():
+	return render_template('survey.html')
 if __name__ == '__main__':
     app.run(debug=True)

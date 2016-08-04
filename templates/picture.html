@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-  <!-- Latest compiled and minified CSS --> 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-  <!-- jQuery library --> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-  <!-- Latest compiled JavaScript --> 
+
+  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 	<title>
 		ANENA
-	</title>	
+	</title>
 </head>
 <body>
 <div class="container">
@@ -32,26 +32,18 @@
   </div>
 </div>
 
-len:{{questions.length}}
-
 <form action="{{url_for('submit_answers', picture_id=pic1.id)}}" action="{{url_for('submit_answers', picture_id=pic1.id)}} " method="Post">
 {%for q in questions%}
 {{q.text}}
-<input type="radio" name="{{q.id}}" value="a1">{{q.a1}}
-<input type="radio" name="{{q.id}}" value="a2">{{q.a2}}
-<input type="radio" name="{{q.id}}" value="a3">{{q.a3}}
-<input type="radio" name="{{q.id}}" value="a4">{{q.a4}}
-<input type="radio" name="{{q.id}}" value="a5">{{q.a5}}
+<br><input type="radio" name="{{q.id}}" value="a1">{{q.a1}}<br>
+<input type="radio" name="{{q.id}}" value="a2">{{q.a2}}<br>
+<input type="radio" name="{{q.id}}" value="a3">{{q.a3}}<br>
+<input type="radio" name="{{q.id}}" value="a4">{{q.a4}}<br>
+<input type="radio" name="{{q.id}}" value="a5">{{q.a5}}<br><br>
 {%endfor%}
 </form>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<--!can you guess the nationality?<br>
-<form action="{{url_for('submit_answers', picture_id=pic1.id)}}" action="{{url_for('submit_answers', picture_id=pic1.id)}} " method="Post">
-<input type="radio" name="nationality" value="q1-a1">israeli<br>
-<input type="radio" name="nationality" value="q1-a2">palestinian<br>
-<input type="radio" name="nationality" value="q1-a3">other<br>
-<input type="submit" name="submit" value="submit">
-</form>s
+<a href="{{url_for('survey')}}">for survey click here!
 </div>
+
 </body>
 </html>
