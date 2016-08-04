@@ -35,10 +35,6 @@ def main_page():
 def pictures(picture_id,category_name):
 	pic1=session.query(Picture).filter_by(id=picture_id).first()
 	pair=session.query(Pair).filter_by(pic1_id=pic1.id).first()
-<<<<<<< HEAD
-=======
-	questions=session.query(Question).all()
->>>>>>> 4e602bb04ae32f771c4d76aded23eb208f58cae4
 	pic2=session.query(Picture).filter_by(id=pair.pic2_id).first()
 	questions=session.query(Question).all()
 	return render_template('picture.html',pic1=pic1,pic2=pic2, questions=questions)
