@@ -15,6 +15,7 @@
 
 </head>
 <body>
+<div class="container-fluid">
   <h1>  We are ANEMA </h1> 
 <br>
 <br>
@@ -22,17 +23,19 @@
 
 
 
-<div class="container-fluid">
+
 <div class="row">
 {%for pic in pics%}
   <div class="col-md-4">
     <div class="thumbnail transparent">
-      <img src="{{ url_for('static', filename=pic.path)}}" class="web_app_img">
+      <img src="{{ url_for('static', filename=pic.path)}}" class="web_app_img" >
         <div class="caption">
+          <div class="mainpageborders" >
         <h3>{{pic.category.capitalize()}}</h3>
         <p>
         <a href="{{url_for('category', category_name=pic.category)}}  " class="btn btn-primary" role="button">Enter</a>
         </p>
+      </div>
       </div>
       </div>
       </div>
