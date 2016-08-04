@@ -6,7 +6,7 @@ app = Flask(__name__)
 ### Add your tables here!
 # For example:
 # from database_setup import Base, Potato, Monkey
-from database_setup import Base, Picture, Answer, Question, Pair
+from database_setup import Base, Picture, Answer, Question, Pair, Survey
 
 from sqlalchemy import create_engine,or_
 from sqlalchemy.orm import sessionmaker
@@ -54,7 +54,8 @@ def submit_answers(pair_id):
 		question_id= question_part.split("q")[-1]
 		new_answer = Answer(pair_id= pair_id,
 						question_id =question_id,
-						selected= answer_id)
+						selected= answer_id,
+						nationality=request.form['nationality'])
 		session.add(new_answer)
 	session.commit()
 	return redirect(url_for('answer_statistics',pair_id=pair_id))
@@ -88,6 +89,22 @@ def answer_statistics(pair_id):
 @app.route('/survey')
 def survey():
 	return render_template('survey.html')
+
+@app.route('/submit_survey', methods= ['post'])
+def submit_survey():
+	answer_nationality=request.form['nationality']
+	answer_name=request.form['name']
+	answer_phone=request.form['phone']
+	answer_email=request.form['email']
+	survey_answers=Survey(
+		name=answer_name,
+		nationality=answer_nationality,
+		phone=answer_phone,
+		email=answer_email)
+	session.add(survey_answers)
+	session.commit()
+	pics=session.query(Picture).filter_by(cover=True).all()
+	return redirect(url_for('main_page',pics=pics))
+
 if __name__ == '__main__':
     app.run(debug=True)
-

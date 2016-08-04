@@ -33,6 +33,17 @@
 </div>
 
 <form action="{{url_for('submit_answers', pair_id=pair_id)}}" method="Post">
+What is your nationality?<br>
+            <div class="form-group">
+  <div class="col-md-4">
+    <select id="selectbasic" name="nationality" class="form-control">
+      <option value="Isreali">Isreali</option>
+      <option value="Palestinian">Palestinian</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+</div>
+<br><br>
 {%for q in questions%}
 {{q.text}}
 <br><input type="radio" name="question{{q.id}}" value="q{{q.id}}a1">{{q.a1}}<br>
@@ -44,7 +55,7 @@
 <br>
 <input type="submit" name="submit">
 </form>
-<a href="{{url_for('survey')}}">for survey click here!
+<a href="{{url_for('survey')}}">For survey click here!
 </div>
 
 </body>

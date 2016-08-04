@@ -2,10 +2,14 @@
 
 
 
-body {
+body, html {
 	/*font-family: 'Shadows Into Light Two', cursive;*/
 	background: url("http://media.tumblr.com/tumblr_m9fo23gjw31r0oika.jpg") no-repeat fixed center;
     background-size:cover;
+    height: 100%;
+ 	background-repeat: no-repeat;
+ 	background-color: #d3d3d3;
+ 	font-family: 'Oxygen', sans-serif
 }
 
 .transparent {
@@ -22,3 +26,16 @@ body {
 	border-radius: 8px;
 }
 
+.main{
+ 	margin-top: 70px;
+}
+
+h1.title { 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
+}
+
+hr{
+	width: 10%;
+	color: #fff;

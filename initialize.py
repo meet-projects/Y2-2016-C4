@@ -2,7 +2,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
 
-from database_setup import Base, Question, Answer, Picture, Pair#, QuestAndPair
+from database_setup import Base, Question, Answer, Picture, Pair, Survey#, QuestAndPair
 
 
 engine = create_engine('sqlite:///project.db')
@@ -18,6 +18,7 @@ session = DBSession()
 session.query(Question).delete()
 session.query(Answer).delete()
 session.query(Picture).delete()
+session.query(Pair).delete()
 #session.query(QuestAndPic).delete()
 ################################################
 #   MAJD YOU WORK ON THIS   #
@@ -25,7 +26,7 @@ session.query(Picture).delete()
 
 q1 = Question(
 
-    text = 'where do you think picture num.1 was taken ?',
+    text = 'Where do you think the right picture was taken ?',
     a1 = 'Israel',
     a2 = 'USA',
     a3 = 'Palestine',
@@ -35,7 +36,7 @@ q1 = Question(
 
 q2 = Question(
 
-	text = 'Where do you think picture num.2 was taken ?',
+	text = 'Where do you think the left picture was taken ?',
 	a1 = 'Israel',
 	a2 = 'USA',
 	a3 = 'Palestine',

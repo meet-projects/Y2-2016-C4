@@ -38,7 +38,6 @@ class Answer(Base):
 class Picture(Base):
     __tablename__ = 'picture'
     id = Column(Integer, primary_key=True)
-    pic_name = Column(String)
     path = Column(String)
     category = Column(String)
     cover = Column(Boolean)
@@ -53,5 +52,7 @@ class Pair(Base):
 class Survey(Base):
     __tablename__ = 'survey'
     id=Column(Integer, primary_key=True)
-    pic1_id =Column(Integer, ForeignKey('picture.id'))
-    pic2_id=Column(Integer, ForeignKey('picture.id'))
+    name=Column(String)
+    nationality=Column(String)
+    email=Column(String)
+    phone=Column(String)

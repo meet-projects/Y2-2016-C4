@@ -31,7 +31,7 @@
   </div>
   <br/>
   {% for q in questions%}
-<h1>{{q.text}}</h1>
+<h2>{{q.text}}</h2>
 <table border="2">
     <tr>
       <th>Answer</th>
@@ -44,22 +44,22 @@
     </tr>
 
     <tr>
-      <td> Answer2</td>
+      <td> {{q.a2}}</td>
       <td>{{stats[q.id]['a2']}}</td>
     </tr>
 
     <tr>
-      <td> Answer3</td>
+      <td> {{q.a3}}</td>
       <td>{{stats[q.id]['a3']}}</td>
     </tr>
 
     <tr>
-      <td> Answer4</td>
+      <td> {{q.a4}}</td>
       <td>{{stats[q.id]['a4']}}</td>
     </tr>
 
     <tr>
-      <td> Answer5</td>
+      <td> {{q.a5}}</td>
       <td>{{stats[q.id]['a5']}}</td>
     </tr>
   </table>
