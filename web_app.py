@@ -31,7 +31,15 @@ def main_page():
 def pictures(picture_id,category_name):
 	pic1=session.query(Picture).filter_by(id=picture_id).first()
 	pair=session.query(Pair).filter_by(pic1_id=pic1.id).first()
+<<<<<<< HEAD
 	questions=session.query(Question).all()
+=======
+<<<<<<< HEAD
+
+=======
+	#print(pic1.id)
+>>>>>>> eaeae57346a0dd81fa7d0df897fdbdd7845ce218
+>>>>>>> 724153aa9d4f11e01c3f63105033648653ebdd86
 	pic2=session.query(Picture).filter_by(id=pair.pic2_id).first()
 	return render_template('picture.html',pic1=pic1,pic2=pic2, questions=questions)
 
@@ -41,7 +49,7 @@ def submit_answers(picture_id):
 	answers = request.form.keys()
 	for answer in answers:
 		if answer == 'submit':
-			continue 
+			continue
 		nat = request.form[answer]
 		nat.split("a")[-1]
 		answer_id= nat.split("a")[-1]
@@ -57,11 +65,11 @@ def submit_answers(picture_id):
 
 	return str(request.form)
 
-'''
+
 @app.route('/questions')
 def questions():
 	return render_template('questions.html')
-'''
+
 @app.route('/statistics/<int:picture_id>')
 def answer_statistics(picture_id):
 
@@ -83,9 +91,11 @@ def answer_statistics(picture_id):
     count1=len(q5)
     answer5= count5/count *100
     session.commit()
-  
 
 
 
+@app.route('/<string:category_name>/pictures/<int:picture_id>/survey')
+def survey():
+	return render_template('survet.html')
 if __name__ == '__main__':
     app.run(debug=True)
