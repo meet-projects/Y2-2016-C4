@@ -14,7 +14,9 @@ body {
 .mainpageborders {
 	text-align:center;
 }
-
+.mainpageborderright {
+	text-align: right;
+}
 .thumbnail > .web_app_img {
 	width: 400px;
 	height:220px;
