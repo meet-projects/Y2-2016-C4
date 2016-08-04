@@ -6,7 +6,7 @@ app = Flask(__name__)
 ### Add your tables here!
 # For example:
 # from database_setup import Base, Potato, Monkey
-from database_setup import Base, Picture, Answer, Question
+from database_setup import Base, Picture, Answer, Question, Pair
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -30,14 +30,9 @@ def main_page():
 @app.route('/<string:category_name>/pictures/<int:picture_id>')
 def pictures(picture_id,category_name):
 	pic1=session.query(Picture).filter_by(id=picture_id).first()
-	try:
-		pic2=session.query(Picture).filter_by(id=picture_id+2).first()
-	except IndexError:
-		pic2=session.query(Picture).filter_by(id=picture_id-2).first()
-	if pic1.category!=pic2.category:
-		pic2=session.query(Picture).filter_by(id=picture_id-2).first()
-	questions=session.query(Question).filter_by(pic_id=pic1.id).all()
-	print(len(questions))
+	pair=session.query(Pair).filter_by(pic1_id=pic1.id).first()
+	print(pic1.id)
+	pic2=session.query(Picture).filter_by(id=pair.pic2_id).first()
 	return render_template('picture.html',pic1=pic1,pic2=pic2, questions=questions)
 
 

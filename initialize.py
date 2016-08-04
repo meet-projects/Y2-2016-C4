@@ -69,14 +69,13 @@ x = QuestAndPic(
 	question_id = q1.id,
 	pic_id = 1)
 
-questions=[q1,q2,q3,q4]
+questions=[q1,q2,q3,q4,q5]
 for question_to_add in questions:
 	session.add(question_to_add)
 ###############################################
-answer_chosen='a3'
 a1=Answer(
 	question_id = 1,
-    selected=answer_chosen,
+    selected='a3',
     nationality = 'Palastinian')
 
 answers=[a1]
@@ -205,6 +204,9 @@ pair10=Pair(pic1_id =17,
 pair11=Pair(pic1_id =18,
 	pic2_id=20
 	)
+pairs=[pair1,pair2,pair3]##############################################################Continue
+for pic_to_add in pics:
+	session.add(pic_to_add)
 ##############################################
 picquestion = QuestAndPic()
 picquestion.picture = p1
