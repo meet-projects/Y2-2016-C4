@@ -204,9 +204,9 @@ pair10=Pair(pic1_id =17,
 pair11=Pair(pic1_id =18,
 	pic2_id=20
 	)
-pairs=[pair1,pair2,pair3]##############################################################Continue
-for pic_to_add in pics:
-	session.add(pic_to_add)
+pairs=[pair1,pair2,pair3,pair4,pair5,pair6,pair7,pair8,pair9,pair10,pair11]##############################################################Continue
+for pair_to_add in pairs:
+	session.add(pair_to_add)
 ##############################################
 picquestion = QuestAndPic()
 picquestion.picture = p1
