@@ -44,8 +44,10 @@ len:{{questions.length}}
 <input type="radio" name="{{q.id}}" value="a5">{{q.a5}}
 {%endfor%}
 </form>
+<a href="{{url_for('survey')}}">for survey click here!
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<--!can you guess the nationality?<br>
+can you guess the nationality?<br>
 <form action="{{url_for('submit_answers', picture_id=pic1.id)}}" action="{{url_for('submit_answers', picture_id=pic1.id)}} " method="Post">
 <input type="radio" name="nationality" value="q1-a1">israeli<br>
 <input type="radio" name="nationality" value="q1-a2">palestinian<br>
@@ -53,6 +55,6 @@ len:{{questions.length}}
 <input type="submit" name="submit" value="submit">
 </form>
 </div>
-<a href="{{url_for('survey')}}">
+
 </body>
 </html>
