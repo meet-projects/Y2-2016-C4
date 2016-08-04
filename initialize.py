@@ -192,19 +192,19 @@ pair5=Pair(pic1_id =9,
 pair6=Pair(pic1_id =10,
 	pic2_id=12
 	)
-pair8=Pair(pic1_id =13,
+pair7=Pair(pic1_id =13,
 	pic2_id=15
 	)
-pair9=Pair(pic1_id =14,
+pair8=Pair(pic1_id =14,
 	pic2_id=16
 	)
-pair10=Pair(pic1_id =17,
+pair9=Pair(pic1_id =17,
 	pic2_id=19
 	)
-pair11=Pair(pic1_id =18,
+pair10=Pair(pic1_id =18,
 	pic2_id=20
 	)
-pairs=[pair1,pair2,pair3,pair4,pair5,pair6,pair7,pair8,pair9,pair10,pair11]##############################################################Continue
+pairs=[pair1,pair2,pair3,pair4,pair5,pair6,pair7,pair8,pair9,pair10]##############################################################Continu
 for pair_to_add in pairs:
 	session.add(pair_to_add)
 ##############################################
