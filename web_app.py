@@ -82,8 +82,8 @@ def answer_statistics(picture_id):
 
 
 
-@app.route('/<string:category_name>/pictures/<int:picture_id>/survey')
-def survey(category_id,picture_id):
+@app.route('/survey')
+def survey():
 	return render_template('survey.html')
 if __name__ == '__main__':
     app.run(debug=True)
