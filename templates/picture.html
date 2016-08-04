@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	
   <!-- Latest compiled and minified CSS --> 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
   <!-- jQuery library --> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
   <!-- Latest compiled JavaScript --> 
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 	<title>
 		ANENA
 	</title>	
 </head>
 <body>
-
+<div class="container">
+<div class="container-fluid">
 <div class="row">
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="{{url_for ('static' , filename=pic1.path)}}">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
+    <div class="thumbnail transparent">
+      <img src="{{url_for ('static' , filename=pic1.path)}}" class="web_app_img">
+
     </div>
   </div>
   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="{{url_for ('static' , filename=pic2.path)}}">
-      <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-      </div>
+    <div class="thumbnail transparent">
+      <img src="{{url_for ('static' , filename=pic2.path)}}" class="web_app_img">
     </div>
   </div>
+  </div>
 </div>
-can you guess the nationality?<br>
-<form action="{{url_for('submit_answers', picture_id=pic1.id)}}"" action="{{url_for('submit_answers', picture_id=pic1.id)}} " method="Post">
+
+len:{{questions.length}}
+
+<form action="{{url_for('submit_answers', picture_id=pic1.id)}}" action="{{url_for('submit_answers', picture_id=pic1.id)}} " method="Post">
+{%for q in questions%}
+{{q.text}}
+<input type="radio" name="{{q.id}}" value="a1">{{q.a1}}
+<input type="radio" name="{{q.id}}" value="a2">{{q.a2}}
+<input type="radio" name="{{q.id}}" value="a3">{{q.a3}}
+<input type="radio" name="{{q.id}}" value="a4">{{q.a4}}
+<input type="radio" name="{{q.id}}" value="a5">{{q.a5}}
+{%endfor%}
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<--!can you guess the nationality?<br>
+<form action="{{url_for('submit_answers', picture_id=pic1.id)}}" action="{{url_for('submit_answers', picture_id=pic1.id)}} " method="Post">
 <input type="radio" name="nationality" value="q1-a1">israeli<br>
 <input type="radio" name="nationality" value="q1-a2">palestinian<br>
 <input type="radio" name="nationality" value="q1-a3">other<br>
 <input type="submit" name="submit" value="submit">
-</form>
-
+</form>s
+</div>
 </body>
 </html>

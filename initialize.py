@@ -161,21 +161,41 @@ p12=Picture(
 	path= 'pic/education/palestineschool.jpg',
 	category= 'education',
 	cover=False)
-############################################# PIC ----- COVER
+############################################# PIC ----- Meaningful
 p13=Picture(
+	path= 'pic/meaningful/I.jpg',
+	category= 'meaningful',
+	cover=False)
+p14=Picture(
+	path= 'pic/meaningful/we.jpg',
+	category= 'meaningful',
+	cover=False)
+p15=Picture(
+	path= 'pic/meaningful/us.jpg',
+	category= 'meaningful',
+	cover=False)
+p16=Picture(
+	path= 'pic/meaningful/goals.jpg',
+	category= 'meaningful',
+	cover=False)
+############################################# PIC ----- COVER
+p17=Picture(
 	path= 'pic/palestineschool.jpg',
 	category= 'education',
 	cover=True)
-p14=Picture(
+p18=Picture(
 	path= 'pic/cover.jpg',
 	category= 'food',
 	cover=True)
-p15=Picture(
+p19=Picture(
 	path= 'pic/activities.jpg',
 	category= 'activity',
 	cover=True)
-
-pics=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15]
+p20=Picture(
+	path='pic/meaningful.jpg',
+	category= 'meaningful',
+	cover=True)
+pics=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20]
 for pic_to_add in pics:
 	session.add(pic_to_add)
 

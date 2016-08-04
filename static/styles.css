@@ -9,7 +9,10 @@ body {
 
 .transparent {
 	background-color: transparent;
-	border-color: skyblue;
+	border-color: transparent;
+}
+.mainpageborders {
+	text-align:center;
 }
 
 .thumbnail > .web_app_img {
@@ -17,3 +20,4 @@ body {
 	height:220px;
 	border-radius: 8px;
 }
+

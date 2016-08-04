@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-  <!-- Latest compiled and minified CSS --> 
-	<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-  <!-- jQuery library --> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-  <!-- Latest compiled JavaScript --> 
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   
+  <!-- Latest compiled and minified CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-	<title>
-		ANENA
-	</title>	
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>
+        ANENA
+    </title>   
 
 </head>
 
@@ -22,31 +22,20 @@
 <h1>{{pics[0].category.capitalize()}} is good</h1>
 <div class="row">
 {%for pic in pics%}
-	
-	<div class="col-xs-8 col-md-4">
-		<div class="thumbnail transparent">
-			<img src="{{url_for('static' , filename=pic.path)}}">
-			<a href="{{url_for('main_page')}}" class="btn btn-info" role="button">Back to Category</a>
-			<a href="{{url_for('pictures', picture_id= pic.id, category_name=pic.category)}}" class="btn btn-info" role="button">Continue to Questions</a> 
 
-		</div>
-	</div>
+   
+    <div class="col-xs-6 col-md-4">
+        <div class="thumbnail transparent">
+            <img src="{{url_for('static' , filename=pic.path)}}" class="web_app_img">
+            <a href="{{url_for('main_page')}}" class="btn btn-info" role="button">Back to Category</a>
+            <a href="{{url_for('pictures', picture_id= pic.id, category_name=pic.category)}}" class="btn btn-info" role="button">Continue to Questions</a>
+
+        </div>
+    </div>
+
 {%endfor%}
 
 </div>
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
-
