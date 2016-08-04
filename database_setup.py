@@ -50,6 +50,8 @@ class Pair(Base):
     pic1_id =Column(Integer, ForeignKey('picture.id'))
     pic2_id=Column(Integer, ForeignKey('picture.id'))
 
-
-
-
+class Survey(Base):
+    __tablename__ = 'survey'
+    id=Column(Integer, primary_key=True)
+    pic1_id =Column(Integer, ForeignKey('picture.id'))
+    pic2_id=Column(Integer, ForeignKey('picture.id'))

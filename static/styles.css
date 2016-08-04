@@ -3,7 +3,7 @@
 
 
 body {
-	font-family: 'Shadows Into Light Two', cursive;
+	/*font-family: 'Shadows Into Light Two', cursive;*/
 	background: url("http://media.tumblr.com/tumblr_m9fo23gjw31r0oika.jpg") no-repeat fixed center;
     background-size:cover;
 }
@@ -15,9 +15,7 @@ body {
 .mainpageborders {
 	text-align:center;
 }
-.mainpageborderright {
-	text-align: right;
-}
+
 .thumbnail > .web_app_img {
 	width: 400px;
 	height:220px;

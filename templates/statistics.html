@@ -28,38 +28,46 @@
       </div>
     </div>
   </div>
-  <table border="2">
+  </div>
+  <br/>
+  {% for q in questions%}
+<h1>{{q.text}}</h1>
+<table border="2">
     <tr>
       <th>Answer</th>
       <th>percentage</th> 
       
     </tr>
     <tr>
-      <td> Answer1</td>
-      <td>{{answer1}}</td>
-      
-    </tr>
-    <tr>
-      <td>Answer2</td>
-      <td>{{answer2}}</td>
-      
-    </tr>
-    <tr>
-      <td>Answer3</td>
-      <td>{{answer3}}</td>
-    </tr>
-    <tr>
-      <td>Answer4</td>
-      <td>{{answer4}}</td>
-    </tr>
-    <tr>
-      <td>Answer5</td>
-      <td>{{answer5}}</td>
+      <td> {{q.a1}}</td>
+      <td>{{stats[q.id]['a1']}}</td>
     </tr>
 
+    <tr>
+      <td> Answer2</td>
+      <td>{{stats[q.id]['a2']}}</td>
+    </tr>
+
+    <tr>
+      <td> Answer3</td>
+      <td>{{stats[q.id]['a3']}}</td>
+    </tr>
+
+    <tr>
+      <td> Answer4</td>
+      <td>{{stats[q.id]['a4']}}</td>
+    </tr>
+
+    <tr>
+      <td> Answer5</td>
+      <td>{{stats[q.id]['a5']}}</td>
+    </tr>
   </table>
-</div>
 
 
+
+  {%endfor%}
+  
 	</div>
 </body>
+</html>
