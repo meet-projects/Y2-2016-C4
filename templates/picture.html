@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-  <!-- Latest compiled and minified CSS --> 
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-  <!-- jQuery library --> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-  <!-- Latest compiled JavaScript --> 
+
+  <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 	<title>
 		ANENA
-	</title>	
+	</title>
 </head>
 <body>
 <div class="container">
@@ -51,7 +51,8 @@ len:{{questions.length}}
 <input type="radio" name="nationality" value="q1-a2">palestinian<br>
 <input type="radio" name="nationality" value="q1-a3">other<br>
 <input type="submit" name="submit" value="submit">
-</form>s
+</form>
 </div>
+<a href="{{url_for('survey')}}">
 </body>
 </html>
