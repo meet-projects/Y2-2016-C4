@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    ANEMA
+  </title>
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+  <!-- Latest compiled and minified CSS --> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+  <!-- jQuery library --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+  <!-- Latest compiled JavaScript --> 
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+  <form action="FILL IT UP LATER" method="post">
+    <table>
+        <tr>
+            <p>Welcome</p>
+            <td>enter name:</td>
+            <td><input type="text" name="first"></td>
+
+        </tr>
+        <tr>
+            <td>enter last name:</td>
+            <td><input type="text" name="last"></td>
+        </tr>
+        <tr>
+            <td>enter Email address</td>
+            <td><input type="text" name="email"></td>
+        </tr>
+        <tr>
+            <td>enter phone number</td>
+            <td><input type="text" name="phone"></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" min="0" max="130"></td>
+        </tr>
+        <tr>
+            <td>What is your nationality</td>
+            <td>
+              <input type="radio" name="israeli" value="israel">israel<br>
+              <input type="radio" name="palestinian" value="palestine">palestine<br>
+              <input type="radio" name="other" value="other">other
+            </td>
+        </tr>
+        <tr>
+            <td><input type="reset"></td>
+            <td><input type="submit" name="submit" value="send survey"></td>
+        </tr>
+        <tr>
+            <td>Which pictures did you like</td>
+            <td>
+                <input type="checkbox" name="pic" value="pic1">pic1<br>
+                <input type="checkbox" name="pic" value="pic2">pic2<br>
+                <input type="checkbox" name="pic" value="pic3">pic3<br>
+                <input type="checkbox" name="pic" value="pic4">pic4<br>
+                <input type="checkbox" name="pic" value="pic5">pic5<br>
+                <input type="checkbox" name="pic" value="pic6">pic6<br>
+                <input type="checkbox" name="pic" value="pic7">pic7<br>
+                <input type="checkbox" name="pic" value="pic8">pic8<br>
+                <input type="checkbox" name="pic" value="pic9">pic9<br>
+                <input type="checkbox" name="pic" value="pic10">pic10<br>
+                <input type="checkbox" name="pic" value="pic11">pic11<br>
+                <input type="checkbox" name="pic" value="pic12">pic12<br>
+                <input type="checkbox" name="pic" value="pic13">pic13<br>
+                <input type="checkbox" name="pic" value="pic14">pic14<br>
+                <input type="checkbox" name="pic" value="pic15">pic15<br>
+                <input type="checkbox" name="pic" value="pic16">pic16<br>
+                <input type="checkbox" name="pic" value="pic17">pic17<br>
+                <input type="checkbox" name="pic" value="pic18">pic18<br>
+                <input type="checkbox" name="pic" value="pic19">pic19<br>
+                <input type="checkbox" name="pic" value="pic20">pic20
+
+            </td>
+        </tr>
+    </table>
+  </form>
+</body>
+</html>
