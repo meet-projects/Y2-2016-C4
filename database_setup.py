@@ -30,7 +30,7 @@ class Question(Base):
 class Answer(Base):
     __tablename__ = 'answer'
     id = Column(Integer, primary_key=True)
-    pic_id = Column(Integer)
+    pic_id = Column(Integer, ForeignKey('picture.id'))
     question_id = Column(Integer, ForeignKey('question.id'))
     selected=Column(String)
     nationality = Column(String(15))
