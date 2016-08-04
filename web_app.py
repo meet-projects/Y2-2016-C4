@@ -64,7 +64,6 @@ def submit_answers(picture_id):
 @app.route('/statistics/<int:picture_id>/<int:question_id>/')
 def answer_statistics(pair_id, question_id):
 
-<<<<<<< HEAD
     answers = session.query(Answer).filter_by(pic_id= picture_id, question_id=question_id).all()
     q = session.query(Question).filter_by(id = question_id).one()
     num_answers = len(answers)
@@ -75,29 +74,6 @@ def answer_statistics(pair_id, question_id):
     for answer in histogram.keys():
         histogram[answer] /= num_answers * 100
     return render_template('statistics.html', q=q, answer1=histogram['a1'], answer2=histogram['a2'],answer3=histogram['a3'],answer4=histogram['a4'],answer5=histogram['a5'])
-=======
-@app.route('/statistics/<int:picture_id>')
-def answer_statistics(picture_id):
-
-    temp = session.query(Answer).filter_by(pic_id= picture_id).all()
-    count = len(temp)
-    q1 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a1').all()
-    count1=len(q1)
-    answer1= count1/count *100
-    q2 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a2').all()
-    count1=len(q2)
-    answer2= count2/count *100
-    q3 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a3').all()
-    count1=len(q3)
-    answer3= count3/count *100
-    q4 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a4').all()
-    count1=len(q4)
-    answer4= count4/count *100
-    q5 = session.query(Answer).filter_by(pic_id= picture_id,selected = 'a5').all()
-    count1=len(q5)
-    answer5= count5/count *100
-    session.commit()
->>>>>>> 4e602bb04ae32f771c4d76aded23eb208f58cae4
 
 
 
