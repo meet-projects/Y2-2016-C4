@@ -17,6 +17,10 @@ session = DBSession()
 
 
 #YOUR WEB APP CODE GOES HERE
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+
 @app.route('/<string:category_name>')
 def category(category_name):
 	pics=session.query(Picture).filter_by(category=category_name, cover=False).all()

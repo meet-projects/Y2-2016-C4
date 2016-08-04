@@ -4,7 +4,8 @@
 
 body {
 	font-family: 'Shadows Into Light Two', cursive;
-	background-image: url("http://pre01.deviantart.net/1454/th/pre/f/2012/108/8/6/teal_windows_8_bubbles_background_by_gifteddeviant-d4wkij8.png");
+	background: url("http://media.tumblr.com/tumblr_m9fo23gjw31r0oika.jpg") no-repeat fixed center;
+    background-size:cover;
 }
 
 .transparent {
