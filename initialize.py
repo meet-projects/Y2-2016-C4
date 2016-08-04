@@ -2,7 +2,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
 
-from database_setup import Base, Question, Answer, QuestAndPic, Picture
+from database_setup import Base, Question, Answer, QuestAndPic, Picture, Pair
 
 
 engine = create_engine('sqlite:///project.db')
@@ -26,7 +26,6 @@ session.query(QuestAndPic).delete()
 q1 = Question(
 
     text = 'where do you think picture num.1 was taken ?',
-
     a1 = 'Israel',
     a2 = 'USA',
     a3 = 'Palestine',
@@ -37,7 +36,6 @@ q1 = Question(
 q2 = Question(
 
 	text = 'Where do you think picture num.2 was taken ?',
-
 	a1 = 'Israel',
 	a2 = 'USA',
 	a3 = 'Palestine',
@@ -177,7 +175,37 @@ for pic_to_add in pics:
 	session.add(pic_to_add)
 
 ##############################################
-
+pair1=Pair(pic1_id =1,
+	pic2_id=3
+	)
+pair2=Pair(pic1_id =2,
+	pic2_id=4
+	)
+pair3=Pair(pic1_id =5,
+	pic2_id=7
+	)
+pair4=Pair(pic1_id =6,
+	pic2_id=8
+	)
+pair5=Pair(pic1_id =9,
+	pic2_id=11
+	)
+pair6=Pair(pic1_id =10,
+	pic2_id=12
+	)
+pair8=Pair(pic1_id =13,
+	pic2_id=15
+	)
+pair9=Pair(pic1_id =14,
+	pic2_id=16
+	)
+pair10=Pair(pic1_id =17,
+	pic2_id=19
+	)
+pair11=Pair(pic1_id =18,
+	pic2_id=20
+	)
+##############################################
 picquestion = QuestAndPic()
 picquestion.picture = p1
 picquestion.question = q1

@@ -18,7 +18,6 @@ class QuestAndPic(Base):
 class Question(Base):
     __tablename__ = 'question'
     id = Column(Integer, primary_key=True)
-    pic_id = Column(Integer)
     text = Column(String(15))
     a1 = Column(String(30))
     a2 = Column(String(60))
@@ -30,7 +29,7 @@ class Question(Base):
 class Answer(Base):
     __tablename__ = 'answer'
     id = Column(Integer, primary_key=True)
-    pic_id = Column(Integer)
+    pic_id = Column(Integer, ForeignKey('picture.id'))
     question_id = Column(Integer, ForeignKey('question.id'))
     selected=Column(String)
     nationality = Column(String(15))
@@ -44,3 +43,13 @@ class Picture(Base):
     category = Column(String)
     cover = Column(Boolean)
     questions = relationship('Question', secondary='quest_and_pic', uselist=True)
+
+class Pair(Base):
+    __tablename__ = 'pair'
+    id=Column(Integer, primary_key=True)
+    pic1_id =Column(Integer, ForeignKey('picture.id'))
+    pic2_id=Column(Integer, ForeignKey('picture.id'))
+
+
+
+
