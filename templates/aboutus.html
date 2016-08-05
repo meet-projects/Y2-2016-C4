@@ -4,7 +4,8 @@
   <title>
   PicPeace
   </title>
-  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+
+ <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
   <!-- Latest compiled and minified CSS --> 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
   <!-- jQuery library --> 
@@ -15,6 +16,7 @@
 
 </head>
 <body>
+
 
 
 
@@ -37,36 +39,51 @@
               <li class="active"><a href="{{ url_for('aboutus') }}">About</a></li> 
 
               
+              
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">catagories<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href="">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
+                  <li><a href="{{ url_for('category', category_name='education') }}">Education</a></li>
+                  <li><a href="{{ url_for('category', category_name='food') }}">Food</a></li>
+                  <li><a href="{{ url_for('category', category_name='activity') }}">Activity</a></li>
+                  <li><a href="{{ url_for('category', category_name='meaningful') }}">Meaningful</a></li>
                   <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-              <li><a href="../navbar-static-top/">Static top</a></li>
-              <li><a href="..">Fixed top</a></li>
+            
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
 
+
+<br>
+<br>
+
+
+<h4>PicPeace is webapp which is basically a photos app, where you can see pictures from both Israel and Palestine, You enter to the main page and there are categories like activities, food, education, where you enter and see two pictures beside each other without any caption or description just five basic questions, you answer them and then click on the submit button
+You see the percentages of what people from both nationalities answered, and we say which picture belonged to which country, and a known stereotype about one of the countries and try to fix people perspective about it and an explanation of what we meant in the pictures.</h4>	
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="" >
+  <div class="col-md-4">
+    <div class="thumbnail transparent ">
+      <img src="static/pic/anan.jpg"  width= height=400  class="web_app_img">
       <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
-        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+      	
+      	<div class="mainpageborders" >
+
+
+
+ <h4>Name = Anan Abuhamed </h4>
+ <h4>Age= 16 </h4>
+      	
+
       </div>
     </div>
   </div>
