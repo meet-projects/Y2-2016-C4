@@ -108,11 +108,15 @@ def submit_survey():
     answer_name=request.form['name']
     answer_phone=request.form['phone']
     answer_email=request.form['email']
+    answer_enjoy=request.form['enjoy']
+    answer_feedback=request.form['feedback']
     survey_answers=Survey(
         name=answer_name,
         nationality=answer_nationality,
         phone=answer_phone,
-        email=answer_email)
+        email=answer_email,
+        enjoy=answer_enjoy,
+        feedback=answer_feedback)
     session.add(survey_answers)
     session.commit()
     pics=session.query(Picture).filter_by(cover=True).all()
