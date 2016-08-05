@@ -78,8 +78,9 @@ def answer_statistics(pair_id):
     
 
         for answer in answers:
-            selected_answer = answer.selected
-            histogram['a'+selected_answer] += 1
+            if answer.selected.isdigit():
+                selected_answer = answer.selected
+                histogram['a'+selected_answer] += 1
         #print(histogram)
         for answer in histogram.keys():
             histogram[answer] = (histogram[answer] / num_answers) * 100
