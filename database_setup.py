@@ -56,3 +56,5 @@ class Survey(Base):
     nationality=Column(String)
     email=Column(String)
     phone=Column(String)
+    enjoy=Column(String)
+    feedback=Column(String)

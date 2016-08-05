@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
     <head> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +13,14 @@
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
+  <!-- Latest compiled and minified CSS --> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+  <!-- jQuery library --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+  <!-- Latest compiled JavaScript --> 
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 
     <title>Admin</title>
   </head>
@@ -31,14 +38,14 @@
           <form class="form-horizontal" method="post" action="{{url_for('submit_survey', pair_id=pair_id)}}">
             What is your nationality?<br>
             <div class="form-group">
-  <div class="col-md-4">
-    <select id="selectbasic" name="nationality" class="form-control">
-      <option value="Isreali">Isreali</option>
-      <option value="Palestinian">Palestinian</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-</div>
+              <div class="col-md-4">
+                <select id="selectbasic" name="nationality" class="form-control">
+                  <option value="Isreali">Isreali</option>
+                  <option value="Palestinian">Palestinian</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
 
             <br><br>
             <div class="form-group">
@@ -65,8 +72,31 @@
               <label for="phone" class="cols-sm-2 control-label">Your Phone</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                  <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
                   <input type="text" class="form-control" name="phone" id="phone"  placeholder="Enter your phone"/>
+                </div>
+              </div>
+            </div>
+            <br>
+            Did you enjoy the website?<br>
+            <div class="form-group">
+              <div class="col-md-4">
+                <select id="selectbasic" name="enjoy" class="form-control">
+                  <option value="6">Very much!</option>
+                  <option value="5">Yes!</option>
+                  <option value="4">I Was OK</option>
+                  <option value="3">Not So Much</option>
+                  <option value="2">I Didn't Enjoy</option>
+                  <option value="1">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="feedback" class="cols-sm-2 control-label">Your Feedback</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-heart fa" aria-hidden="true"></i></span>
+                  <input type="text" class="form-control" name="feedback" id="feedback"  placeholder="Enter your feedback"/>
                 </div>
               </div>
             </div>
@@ -82,90 +112,3 @@
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
   </body>
 </html>
-=======
-<html>
-<head>
-  <title>
-    PicPeace 
-  </title>
-  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
-  <!-- Latest compiled and minified CSS --> 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
-  <!-- jQuery library --> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
-  <!-- Latest compiled JavaScript --> 
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-
-</head>
-<body>
-  <form action="FILL IT UP LATER" method="post">
-    <table>
-        <tr>
-            <h1>Welcome<h1>
-            <h4>enter name:</h4>
-            <h4><input type="text" name="first"></h4>
-
-        </tr>
-        <tr>
-            <h4>Enter last name:</h4>
-            <h4><input type="text" name="last"></h4>
-        </tr>
-        <tr>
-            <h4>Enter Email address</h4>
-            <h4><input type="text" name="email"></h4>
-        </tr>
-        <tr>
-            <h4>enter phone number</h4>
-            <h4><input type="text" name="phone"></h4>
-        </tr>
-        <tr>
-            <h4>Age</h4>
-            <h4><input type="number" name="age" min="0" max="130"></h4>
-        </tr>
-        <tr>
-            <h4>What is your nationality</h4>
-            <td>
-              <input type="radio" name="israeli" value="israel">israel<br>
-              <input type="radio" name="palestinian" value="palestine">palestine<br>
-              <input type="radio" name="other" value="other">other
-            </td>
-        </tr>
-        
-        <tr>
-        
-        
-            <td>Which pictures did you like</td>
-            <td>
-                <input type="checkbox" name="pic" value="pic1">pic1<br>
-                <input type="checkbox" name="pic" value="pic2">pic2<br>
-                <input type="checkbox" name="pic" value="pic3">pic3<br>
-                <input type="checkbox" name="pic" value="pic4">pic4<br>
-                <input type="checkbox" name="pic" value="pic5">pic5<br>
-                <input type="checkbox" name="pic" value="pic6">pic6<br>
-                <input type="checkbox" name="pic" value="pic7">pic7<br>
-                <input type="checkbox" name="pic" value="pic8">pic8<br>
-                <input type="checkbox" name="pic" value="pic9">pic9<br>
-                <input type="checkbox" name="pic" value="pic10">pic10<br>
-                <input type="checkbox" name="pic" value="pic11">pic11<br>
-                <input type="checkbox" name="pic" value="pic12">pic12<br>
-                <input type="checkbox" name="pic" value="pic13">pic13<br>
-                <input type="checkbox" name="pic" value="pic14">pic14<br>
-                <input type="checkbox" name="pic" value="pic15">pic15<br>
-                <input type="checkbox" name="pic" value="pic16">pic16<br>
-                <input type="checkbox" name="pic" value="pic17">pic17<br>
-                <input type="checkbox" name="pic" value="pic18">pic18<br>
-                <input type="checkbox" name="pic" value="pic19">pic19<br>
-                <input type="checkbox" name="pic" value="pic20">pic20
-
-            </td>
-        </tr>
-        <tr>
-            <td><input type="reset"></td>
-            <td><input type="submit" name="submit" value="send survey"></td>
-        </tr>
-    </table>
-  </form>
-</body>
-</html>
->>>>>>> 469677fba0d7ef7785aaf59c40497c4ac44acbc8
