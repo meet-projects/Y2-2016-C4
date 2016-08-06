@@ -2,7 +2,7 @@
 body, html {
 
 	font-family: 'Shadows Into Light Two', cursive;
-	background: url("https://cdn.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-12-full.jpg") no-repeat fixed center;
+	background: url("http://st.hzcdn.com/simgs/b541641b0383be3a_4-4913/rustic-wallpaper.jpttp://st.hzcdn.com/simgs/b541641b0383be3a_4-4913/rustic-wallpaper.jpg") no-repeat fixed center;
     background-size:cover;
     height: 100%;
  	background-repeat: no-repeat;
@@ -24,18 +24,22 @@ body, html {
 	height:220px;
 	border-radius: 20px;
 }
-.imgsize {
-	border-radius: 8px;
+.thumbnail > .imgsize {
+	width: 300px;
+	height:200px;
+	border-radius: 8px
+
 }
 .thumbnail > .web_app_imgs {
 	width: 400px;
 	height:300px;
 	border-radius: 15px;
 
-
-.main {
- 	margin-top: 70px;
 }
+.main {
+ 	margin-top: 0px;
+}
+
 
 h1.title { 
 	font-size: 50px;

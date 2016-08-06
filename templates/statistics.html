@@ -12,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
- <nav class="navbar navbar-default">
+ <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,7 +31,7 @@
               
               
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"Catagories<span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catagories<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="{{ url_for('category', category_name='education') }}">Education</a></li>
                   <li><a href="{{ url_for('category', category_name='food') }}">Food</a></li>
@@ -69,10 +69,11 @@
 <h2>{{q.text}}</h2>
 <table border="2">
     <tr>
-      <th>Answer</th>
+      <th>Answer</th> 
       <th>Percentage</th> 
       
     </tr>
+
     <tr>
       <td> {{q.a1}}</td>
       <td>{{stats[q.id]['a1']}}%</td>
@@ -104,5 +105,9 @@
   {%endfor%}
   
 	</div>
+Stereotype:  Religious people from Israel and Palestine are racist people.
+This stereotype is popular, and alot of people think its true, but the truth is religious people - real religious people who love god and follow everything he said- love all people from all religions! racism is NOT  connected to religion.
+
+
 </body>
 </html>
