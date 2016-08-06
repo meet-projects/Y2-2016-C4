@@ -75,18 +75,20 @@ def answer_statistics(pair_id):
         #print('#######################')
         #print(len(answers))
         histogram = {'a1': 0, 'a2': 0, 'a3': 0, 'a4': 0, 'a5': 0}
-    
-
+        totals={'a1': 0, 'a2': 0, 'a3': 0, 'a4': 0, 'a5': 0}
+        n_dic={'Israeli':{'a1': 0, 'a2': 0, 'a3': 0, 'a4': 0, 'a5': 0}, 'Palestinian':{'a1': 0, 'a2': 0, 'a3': 0, 'a4': 0, 'a5': 0}, 'Other':{'a1': 0, 'a2': 0, 'a3': 0, 'a4': 0, 'a5': 0}}
         for answer in answers:
-            if answer.selected.isdigit():
-                selected_answer = answer.selected
-                histogram['a'+selected_answer] += 1
-        #print(histogram)
-        for answer in histogram.keys():
-            histogram[answer] = (histogram[answer] / num_answers) * 100
+                if answer.selected.isdigit():
+                    n_dic[answer.nationality]['a'+answer.selected] += 1
+                    totals['a'+answer.selected]+=1
+        for nationality in n_dic.keys():
+            for answer in n_dic[nationality]:
+                if totals[answer]!=0:
+                    n_dic[nationality][answer]*=100.0/totals[answer]
+                    n_dic[nationality][answer]=round(n_dic[nationality][answer]*1000)/1000.0
 
-        statistics[q.id] = histogram
-    #print statistics
+        statistics[q.id] = n_dic
+        print n_dic
 
     pair=session.query(Pair).filter_by(id=pair_id).first()
     pic1=session.query(Picture).filter_by(id=pair.pic1_id).first()

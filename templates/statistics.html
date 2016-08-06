@@ -66,39 +66,55 @@
   </div>
   <br/>
   {% for q in questions%}
+<div class="row">
+<div class="col-md-8">
 <h2>{{q.text}}</h2>
-<table border="2">
+
+<table class="table table-hover" border="2">
     <tr>
       <th>Answer</th>
-      <th>Percentage</th> 
+      <th>Israelies Percentage</th>
+      <th>Other Nationalities Percentage</th>
+      <th>Palestinians Percentage</th>
+
       
     </tr>
     <tr>
       <td> {{q.a1}}</td>
-      <td>{{stats[q.id]['a1']}}%</td>
+      {%for n in stats[q.id]%}
+      <td>{{stats[q.id][n]['a1']}}%</td>
+      {%endfor%}
     </tr>
 
     <tr>
       <td> {{q.a2}}</td>
-      <td>{{stats[q.id]['a2']}}%</td>
+      {%for n in stats[q.id]%}
+      <td>{{stats[q.id][n]['a2']}}%</td>
+      {%endfor%}
     </tr>
 
     <tr>
       <td> {{q.a3}}</td>
-      <td>{{stats[q.id]['a3']}}%</td>
+      {%for n in stats[q.id]%}
+      <td>{{stats[q.id][n]['a3']}}%</td>
+      {%endfor%}
     </tr>
 
     <tr>
       <td> {{q.a4}}</td>
-      <td>{{stats[q.id]['a4']}}%</td>
+      {%for n in stats[q.id]%}
+      <td>{{stats[q.id][n]['a4']}}%</td>
+      {%endfor%}
     </tr>
 
     <tr>
       <td> {{q.a5}}</td>
-      <td>{{stats[q.id]['a5']}}%</td>
+      {%for n in stats[q.id]%}
+      <td>{{stats[q.id][n]['a5']}}%</td>
+      {%endfor%}
     </tr>
   </table>
-
+</div></div>
 
 
   {%endfor%}
