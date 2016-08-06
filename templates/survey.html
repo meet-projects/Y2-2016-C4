@@ -93,21 +93,22 @@
             </div>
 
             <div class="form-group">
-              <label for="email" class="cols-sm-2 control-label">Your Email</label>
+             <label for="name" class="cols-sm-2 control-label">Your Phone Number</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                  <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>   
+                  
+                  <input name="phone" id="phonenum" class="form-control" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" required placeholder="Enter Phone Number (format: xxx-xxx-xxxx)">
                 </div>
               </div>
             </div>
-
             <div class="form-group">
-              <label for="phone" class="cols-sm-2 control-label">Your Phone</label>
+              <label for="name" class="cols-sm-2 control-label">Your Email</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="phone" id="phone"  placeholder="Enter your phone"/>
+                  <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                  <input type="email" class="form-control" name="email" required placeholder="Enter Valid Email(format: exampleaccount@example.example">
+
                 </div>
               </div>
             </div>
@@ -144,5 +145,6 @@
 </div>
 </div>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
   </body>
 </html>
