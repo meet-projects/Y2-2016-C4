@@ -1,7 +1,7 @@
 /* Add your CSS Code here */
 body, html {
 
-	font-family: 'Shadows Into Light Two', cursive;
+	font-family: 'Ubuntu', sans-serif;
 	background: url("http://st.hzcdn.com/simgs/b541641b0383be3a_4-4913/rustic-wallpaper.jpttp://st.hzcdn.com/simgs/b541641b0383be3a_4-4913/rustic-wallpaper.jpg") no-repeat fixed center;
     background-size:cover;
     height: 100%;
@@ -50,3 +50,8 @@ h1.title {
 hr{
 	width: 10%;
 	color: #fff;
+}
+
+.navbar-brand{
+	font-family: 'Shadows Into Light Two', cursive;
+}

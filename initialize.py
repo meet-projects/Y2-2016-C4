@@ -26,7 +26,7 @@ session.query(Pair).delete()
 
 q1 = Question(
 
-    text = 'Where do you think the right picture was taken ?',
+    text = 'Where do you think the left picture was taken ?',
     a1 = 'Israel',
     a2 = 'USA',
     a3 = 'Palestine',
@@ -36,7 +36,7 @@ q1 = Question(
 
 q2 = Question(
 
-	text = 'Where do you think the left picture was taken ?',
+	text = 'Where do you think the right picture was taken ?',
 	a1 = 'Israel',
 	a2 = 'USA',
 	a3 = 'Palestine',
