@@ -198,6 +198,7 @@ pair1=Pair(pic1_id =1,
 	pic2_id=3
 	)
 pair2=Pair(pic1_id =2,
+<<<<<<< HEAD
 	pic2_id=4
 	)
 pair3=Pair(pic1_id =5,
@@ -206,13 +207,14 @@ pair3=Pair(pic1_id =5,
 	)
 pair4=Pair(pic1_id =6,
 	pic2_id=8 
+
 	)
 pair5=Pair(pic1_id =9,
 	pic2_id=11
 	)
 pair6=Pair(pic1_id =10,
 	pic2_id=12
-	)
+)
 pair7=Pair(pic1_id =13,
 	pic2_id=15
 	)
