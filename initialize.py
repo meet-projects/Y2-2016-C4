@@ -89,14 +89,14 @@ p1=Picture(
 	cover=False,
 	discription=''' Stereotype:  Israel only serves Palestinian sweets/desserts.
 The first thing you notice is that both desserts look delicious, and each one of them is unique on its own way. Alot of people think that the only good and delicious sweets Israel are Palestinian/Arabian sweets, which is wrong and you can see that by looking at the Israeli sweet shown in the picture.'''
-	)
+)
 
 p2=Picture(
 	path='pic/food/israelfood.jpg',
 	category= 'food',
 	cover=False,
-	discription='''Stereotype:  Israelis can’t cook even the easiest stuff.
-The first thing you notice is how hungry you are, and then you realize that you can’t actually recognize which pizza belongs to Israel or Palestine because they look really similar, and this also can be used as a metaphor to how people are really similar from the inside even if there is a wall between them'''
+	discription='''Stereotype:  Israelis can't cook even the easiest stuff.
+The first thing you notice is how hungry you are, and then you realize that you can't actually recognize which pizza belongs to Israel or Palestine because they look really similar, and this also can be used as a metaphor to how people are really similar from the inside even if there is a wall between them'''
 	)
 p3=Picture(
 	path='pic/food/palestinedessert.jpg',
@@ -114,14 +114,14 @@ p5=Picture(
 	category= 'activity',
 	cover=False,
 	discription= '''Stereotype:  All the places that Israel builds are more beautiful than the places that Palestine builds.
-The first thought that comes into your mind when you see the pictures is WHICH ONE BELONGS TO WHICH because the two pictures show two beautiful places! So you have to use your luck and answer, if you lucky enough you’ll get it right, if not... well you won’t.'''
+The first thought that comes into your mind when you see the pictures is WHICH ONE BELONGS TO WHICH because the two pictures show two beautiful places! So you have to use your luck and answer, if you lucky enough you'll get it right, if not... well you won't.'''
 	)
 p6=Picture(
 	path= 'pic/activities/israelcinema.jpg',
 	category= 'activity',
 	cover=False,
-	discription='''Stereotype:  People in Palestine don’t have places to spend time in/have fun.
-The first thing you notice about the pictures is that they’re not taken in the same place/rooms, the Israel one is taken in the waiting room but the one in Palestine is taken in the film room. The first thing you think of when you hear Palestine is that they live in camps/ don’t have electricity/ don’t have fun activities but the truth is that they aren’t all like this, of course there are people who live in camps, suffer, don’t have places to spend time in, but there is also people who have these stuff. 
+	discription='''Stereotype:  People in Palestine don't have places to spend time in/have fun.
+The first thing you notice about the pictures is that they're not taken in the same place/rooms, the Israel one is taken in the waiting room but the one in Palestine is taken in the film room. The first thing you think of when you hear Palestine is that they live in camps/ don't have electricity/ don't have fun activities but the truth is that they aren't all like this, of course there are people who live in camps, suffer, don't have places to spend time in, but there is also people who have these stuff. 
 '''
 	)
 p7=Picture(
@@ -144,8 +144,8 @@ p10=Picture(
 	path= 'pic/education/Israelschool.jpg',
 	category= 'education',
 	cover=False,
-	 discription='''Stereotype:  People in Palestine don’t have appropriate places to learn in/schools.
-	The first thing you notice about the pictures is that they’re both taken in classrooms but in different countries. Alot of people believe that in Palestine the schools are horrible and really bad unlike Israel where schools are really good with high education system, but this stereotype is not entirely true because there are alot of good schools in Palestine and we can take the schools in east Jerusalem as an example. '''
+	 discription='''Stereotype:  People in Palestine don't have appropriate places to learn in/schools.
+	The first thing you notice about the pictures is that they're both taken in classrooms but in different countries. Alot of people believe that in Palestine the schools are horrible and really bad unlike Israel where schools are really good with high education system, but this stereotype is not entirely true because there are alot of good schools in Palestine and we can take the schools in east Jerusalem as an example. '''
 	)
 p11=Picture(
 	path= 'pic/education/palestinereligion.jpg',
@@ -198,7 +198,6 @@ pair1=Pair(pic1_id =1,
 	pic2_id=3
 	)
 pair2=Pair(pic1_id =2,
-<<<<<<< HEAD
 	pic2_id=4
 	)
 pair3=Pair(pic1_id =5,
