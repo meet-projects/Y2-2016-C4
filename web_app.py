@@ -124,6 +124,25 @@ def submit_survey():
     session.commit()
     pics=session.query(Picture).filter_by(cover=True).all()
     return redirect(url_for('main_page',pics=pics))
+@app.route('/register')
+def register():
+    return  render_template('register.html')
+@app.route('/submit_register', methods= ['post'])
+def submit_register():
+    account_nationality=request.form['nationality']
+    account_name=request.form['name']
+    account_email=request.form['email']
+    account=User(
+        name=account_name,
+        nationality=account_nationality,
+        email=answer_email,
+        logged_in=True)
+    session.add(account)
+    session.commit()
+    return redirect(url_for('main_page'))
+@app.route('/login')
+def login():
+    return render_template('create_user.html')
 
 @app.route('/submit_comment/<int:pair_id>', methods= ['post'])
 def submit_commnet(pair_id):
