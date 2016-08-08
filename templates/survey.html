@@ -71,8 +71,10 @@
 <div class="main-login main-center">
           <form class="form-horizontal" method="post" action="{{url_for('submit_survey', pair_id=pair_id)}}">
             What is your nationality?<br>
+            <div class="row"> 
             <div class="form-group">
-              <div class="col-md-4">
+              <div class="col-md-3"> </div>
+              <div class="col-md-6"> 
                 <select id="selectbasic" name="nationality" class="form-control">
                   <option value="Isreali">Isreali</option>
                   <option value="Palestinian">Palestinian</option>
@@ -80,7 +82,7 @@
                 </select>
               </div>
             </div>
-
+</div></div>
             <br><br>
             <div class="form-group">
               <label for="name" class="cols-sm-2 control-label">Your Name</label>
@@ -114,8 +116,10 @@
             </div>
             <br>
             Did you enjoy the website?<br>
+            <div class="row"> 
             <div class="form-group">
-              <div class="col-md-4">
+              <div class="col-md-3"> </div>
+              <div class="col-md-6"> 
                 <select id="selectbasic" name="enjoy" class="form-control">
                   <option value="6">Very much!</option>
                   <option value="5">Yes!</option>
@@ -125,7 +129,8 @@
                   <option value="1">Other</option>
                 </select>
               </div>
-            </div>
+            </div></div>
+            <br>
             <div class="form-group">
               <label for="feedback" class="cols-sm-2 control-label">Your Feedback</label>
               <div class="cols-sm-10">
