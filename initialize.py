@@ -87,12 +87,18 @@ for question_to_add in questions:
 p1=Picture(
 	path='pic/food/israeldessert.jpg',
 	category= 'food',
-	cover=False)
+	cover=False,
+	discription=''' Stereotype:  Israel only serves Palestinian sweets/desserts.
+The first thing you notice is that both desserts look delicious, and each one of them is unique on its own way. Alot of people think that the only good and delicious sweets Israel are Palestinian/Arabian sweets, which is wrong and you can see that by looking at the Israeli sweet shown in the picture.'''
+)
 
 p2=Picture(
 	path='pic/food/israelfood.jpg',
 	category= 'food',
-	cover=False)
+	cover=False,
+	discription='''Stereotype:  Israelis can't cook even the easiest stuff.
+The first thing you notice is how hungry you are, and then you realize that you can't actually recognize which pizza belongs to Israel or Palestine because they look really similar, and this also can be used as a metaphor to how people are really similar from the inside even if there is a wall between them'''
+	)
 p3=Picture(
 	path='pic/food/palestinedessert.jpg',
 	category= 'food',
@@ -107,11 +113,18 @@ p4=Picture(
 p5=Picture(
 	path= 'pic/activities/israelbowling.jpg',
 	category= 'activity',
-	cover=False)
+	cover=False,
+	discription= '''Stereotype:  All the places that Israel builds are more beautiful than the places that Palestine builds.
+The first thought that comes into your mind when you see the pictures is WHICH ONE BELONGS TO WHICH because the two pictures show two beautiful places! So you have to use your luck and answer, if you lucky enough you'll get it right, if not... well you won't.'''
+	)
 p6=Picture(
 	path= 'pic/activities/israelcinema.jpg',
 	category= 'activity',
-	cover=False)
+	cover=False,
+	discription='''Stereotype:  People in Palestine don't have places to spend time in/have fun.
+The first thing you notice about the pictures is that they're not taken in the same place/rooms, the Israel one is taken in the waiting room but the one in Palestine is taken in the film room. The first thing you think of when you hear Palestine is that they live in camps/ don't have electricity/ don't have fun activities but the truth is that they aren't all like this, of course there are people who live in camps, suffer, don't have places to spend time in, but there is also people who have these stuff. 
+'''
+	)
 p7=Picture(
 	path= 'pic/activities/palestinebowling.jpg',
 	category= 'activity',
@@ -124,11 +137,17 @@ p8=Picture(
 p9=Picture(
 	path= 'pic/education/israelreligion.jpg',
 	category= 'education',
-	cover=False)
+	cover=False ,
+	 discription='''Stereotype:  Religious people from Israel and Palestine are racist people.
+	This stereotype is popular, and alot of people think its true, but the truth is religious people - real religious people who love god and follow everything he said- love all people from all religions! racism is NOT  connected to religion.'''
+	)
 p10=Picture(
 	path= 'pic/education/Israelschool.jpg',
 	category= 'education',
-	cover=False)
+	cover=False,
+	 discription='''Stereotype:  People in Palestine don't have appropriate places to learn in/schools.
+	The first thing you notice about the pictures is that they're both taken in classrooms but in different countries. Alot of people believe that in Palestine the schools are horrible and really bad unlike Israel where schools are really good with high education system, but this stereotype is not entirely true because there are alot of good schools in Palestine and we can take the schools in east Jerusalem as an example. '''
+	)
 p11=Picture(
 	path= 'pic/education/palestinereligion.jpg',
 	category= 'education' , 
@@ -184,16 +203,18 @@ pair2=Pair(pic1_id =2,
 	)
 pair3=Pair(pic1_id =5,
 	pic2_id=7
+
 	)
 pair4=Pair(pic1_id =6,
-	pic2_id=8
+	pic2_id=8 
+
 	)
 pair5=Pair(pic1_id =9,
 	pic2_id=11
 	)
 pair6=Pair(pic1_id =10,
 	pic2_id=12
-	)
+)
 pair7=Pair(pic1_id =13,
 	pic2_id=15
 	)

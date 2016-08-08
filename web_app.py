@@ -38,7 +38,7 @@ def pictures(category_name,pic_id):
     pic1=session.query(Picture).filter_by(id=pair.pic1_id).first()
     pic2=session.query(Picture).filter_by(id=pair.pic2_id).first()
     questions=session.query(Question).all()
-    return render_template('picture.html', pair_id=pair.id, pic1=pic1,pic2=pic2, questions=questions)
+    return render_template('picture.html', pair_id=pair.id, pic1=pic1,pic2=pic2, questions=questions, pair_discription=pic1.discription)
 
 
 @app.route('/submit_answers/<int:pair_id>', methods= ['post'])
