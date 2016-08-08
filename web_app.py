@@ -6,7 +6,7 @@ app = Flask(__name__)
 ### Add your tables here!
 # For example:
 # from database_setup import Base, Potato, Monkey
-from database_setup import Base, Picture, Answer, Question, Pair, Survey
+from database_setup import Base, Picture, Answer, Question, Pair, Survey, Comment
 
 from sqlalchemy import create_engine,or_
 from sqlalchemy.orm import sessionmaker
@@ -124,6 +124,16 @@ def submit_survey():
     session.commit()
     pics=session.query(Picture).filter_by(cover=True).all()
     return redirect(url_for('main_page',pics=pics))
+
+@app.route('/submit_comment/<int:pair_id>', methods= ['post'])
+def submit_commnet(pair_id):
+    comment = Comment(pair_id= pair_id,
+                      nationality=request.form['nationality'],
+                      author=request.form['author'],
+                      text=request.form['text'])
+    session.add(comment)
+    session.commit()
+    return redirect(url_for('answer_statistics',pair_id=pair_id))
 
 if __name__ == '__main__':
     app.run(debug=True)

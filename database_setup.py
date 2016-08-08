@@ -49,6 +49,7 @@ class Pair(Base):
     pic1_id =Column(Integer, ForeignKey('picture.id'))
     pic2_id=Column(Integer, ForeignKey('picture.id'))
 
+
 class Survey(Base):
     __tablename__ = 'survey'
     id=Column(Integer, primary_key=True)
@@ -58,3 +59,12 @@ class Survey(Base):
     phone=Column(String)
     enjoy=Column(String)
     feedback=Column(String)
+
+class Comment(Base):
+    __tablename__ = 'comment'
+    id=Column(Integer, primary_key=True)
+    pair_id=(Integer, ForeignKey('pair.id'))
+    nationality=(String)
+    author=Column(String)
+    text=Column(String)
+        
