@@ -26,17 +26,17 @@ session.query(Pair).delete()
 
 q1 = Question(
 
-    text = 'Which nationality do you support ?',
-    a1 = 'Israel',
-    a2 = 'Not against palestine but not with them',
-    a3 = 'Palestine',
-    a4 = 'Not against israel but nt with them ',
-	a5 = 'I am with both of them')
+    text = 'Do you dislike the other nationality/ies, why?',
+    a1 = 'No',
+    a2 = 'Yes, because someone from the other nationality hurt me',
+    a3 = 'Yes, because i was raised like this',
+    a4 = 'Yes, because I am scared from them ',
+	a5 = 'I dont know/other')
 
 
 q2 = Question(
 
-	text = 'Have you ever communicat with people from other nationalities ?',
+	text = 'Have you ever communicate with people from other nationalities ?',
 	a1 = 'No, never',
 	a2 = 'Rarly',
 	a3 = 'Sometimes',
@@ -52,7 +52,7 @@ q3 = Question(
 	a5 = 'Other')
 	
 q4 = Question(
-	text= 'If you se people from other nationalities would you recognize them ?',
+	text= 'If you see people from other nationalities, will you recognize them ?',
 	a1 = 'No, we are all human being',
 	a2 = 'yes, they will look diffient',
 	a3 ='we are the same',
