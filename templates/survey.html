@@ -33,6 +33,8 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">We are PicPeace</a>
           </div>
@@ -41,10 +43,12 @@
               <li><a href="{{ url_for('main_page') }}">Home</a></li>
               <li><a href="{{ url_for('aboutus') }}">About</a></li> 
               <li class="active"><a href="{{ url_for('survey') }}">Survey</a></li>
+              <li><a href="{{url_for('register')}}">Register</a></li>
+              <li><a href="{{url_for('login')}}">Login</a></li>
               
               
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catagories<span class="caret"></span></a>
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Catagories<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="{{ url_for('category', category_name='education') }}">Education</a></li>
                   <li><a href="{{ url_for('category', category_name='food') }}">Food</a></li>
