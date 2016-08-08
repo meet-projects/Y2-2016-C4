@@ -26,45 +26,46 @@ session.query(Pair).delete()
 
 q1 = Question(
 
-    text = 'Where do you think the left picture was taken ?',
+    text = 'Which nationality do you support ?',
     a1 = 'Israel',
-    a2 = 'USA',
+    a2 = 'Not against palestine but not with them',
     a3 = 'Palestine',
-    a4 = 'Syria',
-	a5 = 'Other')
+    a4 = 'Not against israel but nt with them ',
+	a5 = 'I am with both of them')
 
 
 q2 = Question(
 
-	text = 'Where do you think the right picture was taken ?',
-	a1 = 'Israel',
-	a2 = 'USA',
-	a3 = 'Palestine',
-	a4 = 'Syria',
-	a5 = 'Other')
+	text = 'Have you ever communicat with people from other nationalities ?',
+	a1 = 'No, never',
+	a2 = 'Rarly',
+	a3 = 'Sometimes',
+	a4 = 'Yes, alot',
+	a5 = 'often')
 
 q3 = Question(
-	text= 'How easy was it for you to recognize which one belongs to Palestine and which one belongs to Israel ?',
-	a1 = 'Very easy',
-	a2 = 'Easy',
-	a3 = 'Normal',
-	a4 = 'Hard',
-	a5 = 'Very hard')
-q4 = Question(
 	text = 'Why ?',
-	a1 = 'Its obvious',
-	a2 = 'I have been there',
-	a3 = 'I dont know it seems like it',
-	a4 = 'There is no difference',
+	a1 = 'I am afraid of them',
+	a2 = 'They are racist' ,
+	a3 = 'I have never had the chance to meet them',
+	a4 = 'There is no difference between us',
 	a5 = 'Other')
+	
+q4 = Question(
+	text= 'If you se people from other nationalities would you recognize them ?',
+	a1 = 'No, we are all human being',
+	a2 = 'yes, they will look diffient',
+	a3 ='we are the same',
+	a4 = 'Other')
+
 
 q5 = Question(
 	text = 'How did it make you feel ?',
 	a1 = 'Happy',
-	a2 = 'sad',
-	a3 = 'scared',
-	a4 = 'interested',
-	a5 = 'not sure')
+	a2 = 'Excited',
+	a3 = 'Scared',
+	a4 = 'Interested',
+	a5 = 'Not sure')
 '''
 qp = QuestAndPic(
 	question_id = q1.id,
