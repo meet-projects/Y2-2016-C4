@@ -69,13 +69,4 @@ class Comment(Base):
     author=Column(String)
     text=Column(String)
 
-
-class User(Base):
-    __tablename__ = 'user'
-    id=Column(Integer, primary_key=True)
-    name=Column(String)
-    nationality=Column(String)
-    email=Column(String)
-    logged_in=Column(Boolean)
-    
         
