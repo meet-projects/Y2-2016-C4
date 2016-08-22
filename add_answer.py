@@ -14,7 +14,7 @@ session = DBSession()
 
 nats=['Palestinian', 'Israeli', 'Other']
 
-for i in xrange(1,10000):
+for i in range(1,10000):
 	a1=Answer(
 		pair_id = randint(1,20),
 		question_id = randint(1,5),

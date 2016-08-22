@@ -88,7 +88,7 @@ def answer_statistics(pair_id):
                     n_dic[nationality][answer]=round(n_dic[nationality][answer]*1000)/1000.0
 
         statistics[q.id] = n_dic
-        print n_dic
+        #print n_dic
 
     pair=session.query(Pair).filter_by(id=pair_id).first()
     pic1=session.query(Picture).filter_by(id=pair.pic1_id).first()
