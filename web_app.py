@@ -92,10 +92,28 @@ def answer_statistics(pair_id):
 
     pair=session.query(Pair).filter_by(id=pair_id).first()
     pic1=session.query(Picture).filter_by(id=pair.pic1_id).first()
-    
     pic2=session.query(Picture).filter_by(id=pair.pic2_id).first()
-    return render_template('statistics.html', q=q, pic1=pic1, pic2=pic2, questions=questions, stats=statistics)
+    
 
+    #COMMENTS#
+    comments=session.query(Comment).filter_by(pair_id=pair_id).all()
+    return render_template('statistics.html', q=q, pic1=pic1, pic2=pic2, questions=questions, stats=statistics, comments=comments, pair_id=pair_id)
+
+
+@app.route('/statistics/<int:pair_id>/', methods=['post'])
+def submit_comment(pair_id):
+    text=request.form['text']
+    nationality=request.form['nationality']
+    author=request.form['author']
+    comment=Comment(
+        pair_id=pair_id,
+        nationality=nationality,
+        text=text,
+        author=author
+        )
+    session.add(comment)
+    session.commit()
+    return redirect(url_for('answer_statistics',pair_id=pair_id))
 
 
 

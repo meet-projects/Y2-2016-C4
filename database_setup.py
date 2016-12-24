@@ -64,9 +64,7 @@ class Survey(Base):
 class Comment(Base):
     __tablename__ = 'comment'
     id=Column(Integer, primary_key=True)
-    pair_id=(Integer, ForeignKey('pair.id'))
-    nationality=(String)
+    pair_id=Column(Integer, ForeignKey('pair.id'))
+    nationality=Column(String)
     author=Column(String)
     text=Column(String)
-
-        

@@ -62,8 +62,8 @@
 
    
     <div class="col-xs-6 col-md-4">
-        <div class="thumbnail transparent">
-            <a href="{{url_for('pictures', pic_id= pic.id, category_name=pic.category)}}"><img src="{{url_for('static' , filename=pic.path)}}" class="web_app_img"></a>
+        <div class="thumbnail transparent web_app_img">
+            <a href="{{url_for('pictures', pic_id= pic.id, category_name=pic.category)}}"><img class="imgsize" src="{{url_for('static' , filename=pic.path)}}" class="web_app_img"></a>
 
             <a href="{{url_for('pictures', pic_id= pic.id, category_name=pic.category)}}" class="btn btn-info" role="button">Continue to Questions</a>
 

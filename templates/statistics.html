@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+<br><br><br>
  <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -123,7 +124,80 @@
   {%endfor%}
   
 	</div>
+<br>
 
 
+
+
+<div class="container">
+<h2>Comments</h2>
+{%for comment in comments%}
+<div class="row">
+<div class="col-sm-12">
+
+</div><!-- /col-sm-12 -->
+</div><!-- /row -->
+
+<div class="row">
+
+<div class="col-sm-1">
+
+<div class="thumbnail">
+<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+</div><!-- /thumbnail -->
+</div><!-- /col-sm-1 -->
+
+<div class="col-sm-5">
+<div class="panel panel-default">
+<div class="panel-heading">
+<strong>{{comment.author}}</strong> <span class="text-muted">{{comment.nationality}}</span>
+</div>
+<div class="panel-body">
+{{comment.text}}
+</div><!-- /panel-body -->
+</div><!-- /panel panel-default -->
+</div><!-- /col-sm-5 -->
+
+
+</div><!-- /row -->
+
+
+{%endfor%}
+
+
+ <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<div class="container">
+  <div class="row">
+    <h2>Add Comment</h2>
+  </div>
+    
+    <div class="row">
+    
+    <div class="col-md-6">
+                <div class="widget-area no-padding blank">
+                <div class="status-upload form-group">
+                  <form class="form-horizontal" action="{{url_for('submit_comment', pair_id=pair_id)}}" method="Post">
+                    <textarea class="form-control" name="text" placeholder="What are you doing right now?" ></textarea>
+                    <input type="text" name="author" class="form-control" placeholder="Your name">
+                    <select id="selectbasic" name="nationality" class="form-control">
+                    <option value="Israeli">Israeli</option>
+                    <option value="Palestinian">Palestinian</option>
+                    <option value="Other">Other</option>
+                    </select>
+                    <ul>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
+                      <li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
+                    </ul>
+                    <button type="submit" name="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                  </form>
+                </div><!-- Status Upload  -->
+              </div><!-- Widget Area -->
+            </div>
+        
+    </div>
+</div>
+</div><!-- /container -->
 </body>
 </html>

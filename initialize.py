@@ -2,7 +2,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
 
-from database_setup import Base, Question, Answer, Picture, Pair, Survey#, QuestAndPair
+from database_setup import Base, Question, Answer, Picture, Pair, Survey, Comment
 
 
 engine = create_engine('sqlite:///project.db')
@@ -19,7 +19,7 @@ session.query(Question).delete()
 session.query(Answer).delete()
 session.query(Picture).delete()
 session.query(Pair).delete()
-#session.query(QuestAndPic).delete()
+session.query(Comment).delete()
 ################################################
 #   MAJD YOU WORK ON THIS   #
 
@@ -227,7 +227,7 @@ pair9=Pair(pic1_id =17,
 pair10=Pair(pic1_id =18,
 	pic2_id=20
 	)
-pairs=[pair1,pair2,pair3,pair4,pair5,pair6,pair7,pair8,pair9,pair10]##############################################################Continu
+pairs=[pair1,pair2,pair3,pair4,pair5,pair6,pair7,pair8,pair9,pair10]##############################################################Continue
 for pair_to_add in pairs:
 	session.add(pair_to_add)
 ##############################################
@@ -242,3 +242,4 @@ session.add(picquestion)
 session.add(picquestionw)'''
 
 session.commit()
+print('Project initialized: Done.')

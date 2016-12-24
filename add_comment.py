@@ -4,7 +4,7 @@ from random import randint, choice
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
 
-from database_setup import Base, Answer
+from database_setup import Base, Comment 
 
 
 engine = create_engine('sqlite:///project.db')
@@ -16,15 +16,15 @@ session = DBSession()
 
 nats=['Palestinian', 'Israeli', 'Other']
 
-for i in range(1,10000):
-	a1=Answer(
-		pair_id = randint(1,20),
-		question_id = randint(1,5),
-	    selected=randint(1,5),
-	    nationality = choice(nats))
+for i in range(1,6):
+	a1=Comment(
+		pair_id = 2,
+		nationality = choice(nats),
+	    author='Eilon',
+	    text='Comment test number '+ str(i)
+	    )
 
 	session.add(a1)
 
 
 session.commit()
-print('Answers added.')
